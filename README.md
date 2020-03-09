@@ -1,10 +1,10 @@
 # OutfitCheck
 
 ## Team 
-Michelle Vasquez 
-Lynette Nguyen 
-Karla Abad-Torrez
-Alexis Vu 
+- Michelle Vasquez 
+- Lynette Nguyen 
+- Karla Abad-Torrez
+- Alexis Vu 
 
 ## App Description 
 An app that will help you decide if your outfit matches the weather for the day. 
