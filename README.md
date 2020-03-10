@@ -10,7 +10,7 @@
 An app that will help you decide if your outfit matches the weather for the day. 
 
 ## Wireframe
-![Image of Wireframe](https://imgur.com/5Qefspp)
+![Image of Wireframe](https://imgur.com/5Qefspp.png)
 <img src="http://g.recordit.co/NlsSEYSE4V.gif" width=250>
 
 
