@@ -1,26 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lcL-cf-aGK">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="LS3-si-H5r">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="lcL-cf-aGK" customClass="ViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="95x-fz-35V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVU-AO-3IY">
+                                <rect key="frame" x="60" y="67" width="255" height="78"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="78"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOK-WC-e33">
+                                <rect key="frame" x="60" y="347" width="255" height="120"/>
+                                <color key="backgroundColor" red="0.76877796649999997" green="0.89869898560000006" blue="0.89112460609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="NES-E4-QmF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="42"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Suggest an Outfit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-jC-730">
+                                <rect key="frame" x="60" y="492" width="255" height="120"/>
+                                <color key="backgroundColor" red="0.76877796649999997" green="0.89869898560000006" blue="0.89112460609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Jst-et-UFv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="42"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Outfit Check">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1X-LT-C3b">
+                                <rect key="frame" x="60" y="153" width="261" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Pjt-si-dWc"/>
+                                    <constraint firstAttribute="height" constant="64" id="nLo-yB-A1l"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="need an outfit check">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="26" name="BlueFiresSample"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="?">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="trailing" secondItem="aVU-AO-3IY" secondAttribute="trailing" constant="60" id="0ix-LY-xii"/>
+                            <constraint firstItem="C1X-LT-C3b" firstAttribute="top" secondItem="aVU-AO-3IY" secondAttribute="bottom" constant="8" id="2eu-wd-L4w"/>
+                            <constraint firstItem="Rbo-jC-730" firstAttribute="top" secondItem="VOK-WC-e33" secondAttribute="bottom" constant="25" id="6aB-nI-2fW"/>
+                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="bottom" secondItem="VOK-WC-e33" secondAttribute="bottom" constant="200" id="7BS-DX-vo5"/>
+                            <constraint firstItem="Rbo-jC-730" firstAttribute="leading" secondItem="fbE-Ys-EeO" secondAttribute="leading" constant="60" id="7r0-3f-5R8"/>
+                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="trailing" secondItem="Rbo-jC-730" secondAttribute="trailing" constant="60" id="LmH-yr-8ZJ"/>
+                            <constraint firstItem="aVU-AO-3IY" firstAttribute="leading" secondItem="fbE-Ys-EeO" secondAttribute="leading" constant="60" id="NRU-mj-LjA"/>
+                            <constraint firstItem="VOK-WC-e33" firstAttribute="top" secondItem="C1X-LT-C3b" secondAttribute="bottom" constant="130" id="Nut-eO-NqC"/>
+                            <constraint firstItem="VOK-WC-e33" firstAttribute="leading" secondItem="fbE-Ys-EeO" secondAttribute="leading" constant="60" id="NwA-l1-MOl"/>
+                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="VOK-WC-e33" secondAttribute="trailing" constant="60" id="gHb-af-xMu"/>
+                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="trailing" secondItem="C1X-LT-C3b" secondAttribute="trailing" constant="54" id="jOB-qi-MF4"/>
+                            <constraint firstItem="C1X-LT-C3b" firstAttribute="leading" secondItem="fbE-Ys-EeO" secondAttribute="leading" constant="60" id="mnh-dR-Fwv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fbE-Ys-EeO"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWO-ej-SKI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="105"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
         </scene>
     </scenes>
 </document>
