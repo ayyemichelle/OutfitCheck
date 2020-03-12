@@ -11,19 +11,14 @@ import MapKit
 import CoreLocation
 
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
-
+class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
+    
     let locationManager = CLLocationManager()
     var longitude: CLLocationDegrees = 0.0
     var latitude: CLLocationDegrees = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-        for family: String in UIFont.familyNames {
-            print("\(family)")
-            for names: String in UIFont.fontNames(forFamilyName: family) {
-                print("== \(names)")
-            }
-        }
+        
         
         
         // API call to Open Weather API - need to move to correct view controller
