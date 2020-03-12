@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeViewController-->
         <scene sceneID="LS3-si-H5r">
             <objects>
-                <viewController id="lcL-cf-aGK" customClass="ViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WelcomeViewController" id="lcL-cf-aGK" customClass="WelcomeViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="95x-fz-35V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="pfT-fV-kZX" kind="show" id="Cu2-iX-wC8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-jC-730">
                                 <rect key="frame" x="60" y="492" width="255" height="120"/>
@@ -54,6 +57,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cwB-me-YmN" kind="show" id="h47-Gv-J3C"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1X-LT-C3b">
                                 <rect key="frame" x="60" y="153" width="261" height="64"/>
@@ -102,5 +108,97 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.58695652173915"/>
         </scene>
+        <!--SuggestOutfitViewController-->
+        <scene sceneID="dol-hE-67E">
+            <objects>
+                <viewController title="SuggestOutfitViewController" id="JQ2-Fv-pGB" customClass="SuggestOutfitViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cWW-9h-Say">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JD4-Gr-e7g"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Suggest an Outfit" id="tsM-YO-1h3">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="chevron.left.circle.fill" catalog="system" id="rqT-Mn-GVB">
+                            <color key="tintColor" red="0.4095082397" green="0.96428328510000005" blue="1" alpha="0.41871789380000002" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onBackButton:" destination="JQ2-Fv-pGB" id="InR-ec-Yiv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QYr-Yk-dJ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2247.1999999999998" y="137.18140929535232"/>
+        </scene>
+        <!--OutfitCheckViewController-->
+        <scene sceneID="vIl-de-e7l">
+            <objects>
+                <viewController title="OutfitCheckViewController" id="XiQ-X0-pyW" customClass="OutfitCheckViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0gG-Qb-omg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pxQ-d9-REX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Outfit Check" id="CL0-nG-5zg">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left.circle.fill" catalog="system" id="RdO-Ju-Pnr">
+                            <color key="tintColor" red="0.4095082397" green="0.96428328510000005" blue="1" alpha="0.41871789380000002" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onBackButton:" destination="XiQ-X0-pyW" id="7dj-ZK-i9N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mY9-Ah-rqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2247" y="893"/>
+        </scene>
+        <!--Outfit Check-->
+        <scene sceneID="bW0-pe-F0O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="pfT-fV-kZX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Outfit Check" id="CAZ-IP-r8l"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cn1-Np-bCB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JQ2-Fv-pGB" kind="relationship" relationship="rootViewController" id="sqN-aF-FE7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmK-fE-n56" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="djl-E5-QcU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cwB-me-YmN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ayG-AE-PeU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jp9-HA-57w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XiQ-X0-pyW" kind="relationship" relationship="rootViewController" id="hFW-lQ-XhW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8B-PZ-GcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="893"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="chevron.left.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
