@@ -14,9 +14,9 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     var longitude: CLLocationDegrees = 0.0
     var latitude: CLLocationDegrees = 0.0
-    @IBOutlet weak var locationTextField: UITextField!
+    var city: String = ""
+    @IBOutlet weak var locationLabel: UILabel!
     
-  
     let myPickerData = [String](arrayLiteral: "Test", "Test2")
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,9 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         // Do any additional setup after loading the view.
             // OccasionPicker.delegate = self
         sendOpenWeatherRequest()
+        //print(city)
+        
+        
     }
     
 
@@ -57,10 +60,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
                 // data is contained in this dictionary
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
-                
-                //self.movies = dataDictionary["results"] as! [[String:Any]] // need to cast as array of dictionaries
-                
-                
+                self.locationLabel.text =  dataDictionary["name"] as! String
                 print(dataDictionary)
                 
                 
