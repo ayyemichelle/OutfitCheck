@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		39C41EED487D67D02F0D3153 /* Pods_OutfitCheckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2925074936329CAC4B678F0F /* Pods_OutfitCheckTests.framework */; };
 		A3904E8A6F397E0E819465A7 /* Pods_OutfitCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47BE3B0DA7B8EB12FFCFB2D /* Pods_OutfitCheck.framework */; };
-		CE3F97D22419D903002B1E89 /* bluefires_sample.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3F97D12419D903002B1E89 /* bluefires_sample.ttf */; };
 		CE3F97D42419DB07002B1E89 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */; };
 		CE3F97D6241ACE33002B1E89 /* SuggestOutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */; };
 		CE3F97D8241AF4FD002B1E89 /* OutfitCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F97D7241AF4FD002B1E89 /* OutfitCheckViewController.swift */; };
+		CE3F97DB241B3475002B1E89 /* bluefires_sample.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3F97DA241B3475002B1E89 /* bluefires_sample.ttf */; };
 		CEDB9CFB24197A70005C45F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB9CFA24197A70005C45F4 /* AppDelegate.swift */; };
 		CEDB9CFD24197A70005C45F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB9CFC24197A70005C45F4 /* SceneDelegate.swift */; };
 		CEDB9CFF24197A70005C45F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDB9CFE24197A70005C45F4 /* ViewController.swift */; };
@@ -47,10 +47,10 @@
 		2925074936329CAC4B678F0F /* Pods_OutfitCheckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitCheckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4663943DAF3060D9AC6DAB6D /* Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheck-OutfitCheckUITests/Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69DA98A8785ECD19BF55E468 /* Pods-OutfitCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheck.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheck/Pods-OutfitCheck.debug.xcconfig"; sourceTree = "<group>"; };
-		CE3F97D12419D903002B1E89 /* bluefires_sample.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bluefires_sample.ttf; path = ../../../../../../Downloads/blue_fires/bluefires_sample.ttf; sourceTree = "<group>"; };
 		CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestOutfitViewController.swift; sourceTree = "<group>"; };
 		CE3F97D7241AF4FD002B1E89 /* OutfitCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCheckViewController.swift; sourceTree = "<group>"; };
+		CE3F97DA241B3475002B1E89 /* bluefires_sample.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bluefires_sample.ttf; sourceTree = "<group>"; };
 		CEDB9CF724197A70005C45F4 /* OutfitCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutfitCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDB9CFA24197A70005C45F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEDB9CFC24197A70005C45F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +109,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE3F97D9241B3475002B1E89 /* blue_fires */ = {
+			isa = PBXGroup;
+			children = (
+				CE3F97DA241B3475002B1E89 /* bluefires_sample.ttf */,
+			);
+			path = blue_fires;
+			sourceTree = "<group>";
+		};
 		CEDB9CEE24197A70005C45F4 = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +151,7 @@
 				CEDB9D0324197A73005C45F4 /* Assets.xcassets */,
 				CEDB9D0524197A73005C45F4 /* LaunchScreen.storyboard */,
 				CEDB9D0824197A73005C45F4 /* Info.plist */,
-				CE3F97D12419D903002B1E89 /* bluefires_sample.ttf */,
+				CE3F97D9241B3475002B1E89 /* blue_fires */,
 				CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */,
 			);
 			path = OutfitCheck;
@@ -289,9 +297,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3F97DB241B3475002B1E89 /* bluefires_sample.ttf in Resources */,
 				CEDB9D0724197A73005C45F4 /* LaunchScreen.storyboard in Resources */,
 				CEDB9D0424197A73005C45F4 /* Assets.xcassets in Resources */,
-				CE3F97D22419D903002B1E89 /* bluefires_sample.ttf in Resources */,
 				CEDB9D0224197A70005C45F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
