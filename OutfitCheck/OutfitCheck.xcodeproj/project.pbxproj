@@ -107,12 +107,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE3F97D9241B3475002B1E89 /* blue_fires */ = {
+		CE3F97D9241B3475002B1E89 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
 				CE3F97DA241B3475002B1E89 /* bluefires_sample.ttf */,
 			);
-			path = blue_fires;
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		CEDB9CEE24197A70005C45F4 = {
@@ -148,7 +148,7 @@
 				CEDB9D0324197A73005C45F4 /* Assets.xcassets */,
 				CEDB9D0524197A73005C45F4 /* LaunchScreen.storyboard */,
 				CEDB9D0824197A73005C45F4 /* Info.plist */,
-				CE3F97D9241B3475002B1E89 /* blue_fires */,
+				CE3F97D9241B3475002B1E89 /* fonts */,
 				CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */,
 			);
 			path = OutfitCheck;
