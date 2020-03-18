@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		39C41EED487D67D02F0D3153 /* Pods_OutfitCheckTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2925074936329CAC4B678F0F /* Pods_OutfitCheckTests.framework */; };
+		7672DDA2241B567900C11E0D /* DancingScript-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7672DDA1241B567900C11E0D /* DancingScript-VariableFont_wght.ttf */; };
+		7672DDA4241B568B00C11E0D /* Oswald-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7672DDA3241B568B00C11E0D /* Oswald-VariableFont_wght.ttf */; };
 		A3904E8A6F397E0E819465A7 /* Pods_OutfitCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47BE3B0DA7B8EB12FFCFB2D /* Pods_OutfitCheck.framework */; };
 		CE3F97D42419DB07002B1E89 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */; };
 		CE3F97D6241ACE33002B1E89 /* SuggestOutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */; };
@@ -46,6 +48,8 @@
 		2925074936329CAC4B678F0F /* Pods_OutfitCheckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitCheckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4663943DAF3060D9AC6DAB6D /* Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheck-OutfitCheckUITests/Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69DA98A8785ECD19BF55E468 /* Pods-OutfitCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheck.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheck/Pods-OutfitCheck.debug.xcconfig"; sourceTree = "<group>"; };
+		7672DDA1241B567900C11E0D /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		7672DDA3241B568B00C11E0D /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestOutfitViewController.swift; sourceTree = "<group>"; };
 		CE3F97D7241AF4FD002B1E89 /* OutfitCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCheckViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 		CE3F97D9241B3475002B1E89 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				7672DDA1241B567900C11E0D /* DancingScript-VariableFont_wght.ttf */,
+				7672DDA3241B568B00C11E0D /* Oswald-VariableFont_wght.ttf */,
 				CE3F97DA241B3475002B1E89 /* bluefires_sample.ttf */,
 			);
 			path = fonts;
@@ -297,7 +303,9 @@
 				CE3F97DB241B3475002B1E89 /* bluefires_sample.ttf in Resources */,
 				CEDB9D0724197A73005C45F4 /* LaunchScreen.storyboard in Resources */,
 				CEDB9D0424197A73005C45F4 /* Assets.xcassets in Resources */,
+				7672DDA2241B567900C11E0D /* DancingScript-VariableFont_wght.ttf in Resources */,
 				CEDB9D0224197A70005C45F4 /* Main.storyboard in Resources */,
+				7672DDA4241B568B00C11E0D /* Oswald-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

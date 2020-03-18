@@ -11,6 +11,12 @@ import MapKit
 import CoreLocation
 
 class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
+    
+    
+    @IBOutlet weak var occasionPicker: UIPickerView!
+    
+    var occasionPickerData: [String] = [String]()
+    
 
     var longitude: CLLocationDegrees = 0.0
     var latitude: CLLocationDegrees = 0.0
@@ -27,9 +33,17 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         sendOpenWeatherRequest()
         //print(city)
         
+        self.occasionPicker.delegate = self
+        self.occasionPicker.dataSource = self
+        
+        occasionPickerData = ["Casual", "Formal", "Semi-formal", "Business"]
         
     }
     
+    override func didReceiveMemoryWarning() {
+           super.didReceiveMemoryWarning()
+           // Dispose of any resources that can be recreated.
+       }
 
     @IBAction func onBackButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -40,11 +54,11 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return myPickerData.count
+        return occasionPickerData.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return myPickerData[row]
+        return occasionPickerData[row]
     }
     
     func sendOpenWeatherRequest(){
