@@ -46,6 +46,8 @@
 		2925074936329CAC4B678F0F /* Pods_OutfitCheckTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitCheckTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4663943DAF3060D9AC6DAB6D /* Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheck-OutfitCheckUITests/Pods-OutfitCheck-OutfitCheckUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		69DA98A8785ECD19BF55E468 /* Pods-OutfitCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheck.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheck/Pods-OutfitCheck.debug.xcconfig"; sourceTree = "<group>"; };
+		761BF9BD2421D40B00E73889 /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		761BF9BE2421D41100E73889 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestOutfitViewController.swift; sourceTree = "<group>"; };
 		CE3F97D7241AF4FD002B1E89 /* OutfitCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCheckViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +112,9 @@
 		CE3F97D9241B3475002B1E89 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				761BF9BE2421D41100E73889 /* DancingScript-VariableFont_wght.ttf */,
 				CE3F97DA241B3475002B1E89 /* bluefires_sample.ttf */,
+				761BF9BD2421D40B00E73889 /* Oswald-VariableFont_wght.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
