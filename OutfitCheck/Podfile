@@ -8,6 +8,7 @@ target 'OutfitCheck' do
   # Pods for OutfitCheck
   pod 'AlamofireImage'
   pod 'Alamofire'
+  pod 'Base64', '~> 1.1'
 
 
   target 'OutfitCheckTests' do

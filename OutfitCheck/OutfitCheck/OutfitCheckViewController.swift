@@ -54,7 +54,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
                   
                   //self.movies = dataDictionary["results"] as! [[String:Any]] // need to cast as array of dictionaries
                   
-                  
                   print(dataDictionary)
                   
                   
