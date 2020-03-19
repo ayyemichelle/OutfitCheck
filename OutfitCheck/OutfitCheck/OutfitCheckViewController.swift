@@ -11,6 +11,8 @@ import MapKit
 import CoreLocation
 import AlamofireImage
 
+
+
 class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var longitude: CLLocationDegrees = 0.0
@@ -108,6 +110,12 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         let size = CGSize(width: 300, height: 300)
         let scaledImage = image.af_imageScaled(to: size)
         print(img.size)
+        
+        // convert image to base 64
+        let imageData: NSData =  scaledImage.pngData()! as NSData
+        let encodedImageString = imageData.base64EncodedString(options: [])
+        
+        // send api request
     }
     
     
