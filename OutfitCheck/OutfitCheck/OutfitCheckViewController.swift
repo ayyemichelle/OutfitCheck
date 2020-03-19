@@ -108,7 +108,7 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         
         // convert image to base 64
         let imageData: NSData =  scaledImage.pngData()! as NSData
-        let encodedImageString = imageData.base64EncodedString(options: [])
+        let encodedImageString = imageData.base64EncodedString(options: .lineLength64Characters)
         
         // send api request
         GoogleVisionAPI.annotateImageRequest(encodedImage: encodedImageString)

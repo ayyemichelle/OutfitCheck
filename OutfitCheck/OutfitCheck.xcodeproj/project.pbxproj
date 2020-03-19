@@ -11,7 +11,7 @@
 		04416D3C24235E6400E9EAD5 /* RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D3B24235E6400E9EAD5 /* RequestBody.swift */; };
 		04416D3E24235F7E00E9EAD5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D3D24235F7E00E9EAD5 /* Request.swift */; };
 		04416D4024235FEF00E9EAD5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D3F24235FEF00E9EAD5 /* Image.swift */; };
-		04416D442423606500E9EAD5 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D432423606500E9EAD5 /* Feature.swift */; };
+		04416D4624240B6800E9EAD5 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D4524240B6800E9EAD5 /* Feature.swift */; };
 		0AC33A64D76FF558A569EF4D /* libPods-OutfitCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */; };
 		A292E9F517129164676FFB08 /* libPods-OutfitCheckTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C3C8FB5BC9449FEEC368EA /* libPods-OutfitCheckTests.a */; };
 		A5BEC2D9B1E2D529D5AD676E /* libPods-OutfitCheck-OutfitCheckUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA76D836A1ACF91ABDB1AA1 /* libPods-OutfitCheck-OutfitCheckUITests.a */; };
@@ -52,7 +52,7 @@
 		04416D3B24235E6400E9EAD5 /* RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBody.swift; sourceTree = "<group>"; };
 		04416D3D24235F7E00E9EAD5 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		04416D3F24235FEF00E9EAD5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		04416D432423606500E9EAD5 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		04416D4524240B6800E9EAD5 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OutfitCheck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122A03A85430E5B51C86403D /* Pods-OutfitCheckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheckTests.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheckTests/Pods-OutfitCheckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		145B9F4465C902AEC2A32974 /* Pods-OutfitCheckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheckTests.release.xcconfig"; path = "Target Support Files/Pods-OutfitCheckTests/Pods-OutfitCheckTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				04416D3B24235E6400E9EAD5 /* RequestBody.swift */,
 				04416D3D24235F7E00E9EAD5 /* Request.swift */,
 				04416D3F24235FEF00E9EAD5 /* Image.swift */,
-				04416D432423606500E9EAD5 /* Feature.swift */,
+				04416D4524240B6800E9EAD5 /* Feature.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -439,12 +439,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04416D442423606500E9EAD5 /* Feature.swift in Sources */,
 				CE3F97D42419DB07002B1E89 /* WelcomeViewController.swift in Sources */,
 				04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */,
 				CE3F97D8241AF4FD002B1E89 /* OutfitCheckViewController.swift in Sources */,
 				04416D3C24235E6400E9EAD5 /* RequestBody.swift in Sources */,
 				ADD97BFB2422F60000F30277 /* SuggestResultViewController.swift in Sources */,
+				04416D4624240B6800E9EAD5 /* Feature.swift in Sources */,
 				CEDB9CFB24197A70005C45F4 /* AppDelegate.swift in Sources */,
 				CE3F97D6241ACE33002B1E89 /* SuggestOutfitViewController.swift in Sources */,
 				04416D3E24235F7E00E9EAD5 /* Request.swift in Sources */,

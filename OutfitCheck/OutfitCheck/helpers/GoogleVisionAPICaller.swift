@@ -7,26 +7,40 @@
 //
 
 import Foundation
+import Alamofire
 
 class GoogleVisionAPI {
     
     static func annotateImageRequest(encodedImage: String){
         print("calling request")
-        let feature = Feature(type: "IMAGE_PROPERTIES", maxResults: 10)
-        let image = Image(content: encodedImage)
+       /* let feature = Feature(type: "IMAGE_PROPERTIES", maxResults: 10)
+        let image = Image(content: "")
         let request = Request(image: image, features: [feature])
-        let requestBody = RequestBody(request: [request])
+        let requestBody = RequestBody(requests: [request])*/
         
-        // to json
-        let jsonEncoder = JSONEncoder()
-        let jsonData = try! jsonEncoder.encode(requestBody)
+        // old fashion way
+        let feature1 = ["type": "IMAGE_PROPERTIES", "maxResults": 10] as [String : Any]
+        let features = [feature1]
+        let content = ["content": encodedImage]
+        let image = ["content": content]
+        let request = ["image": image, "features": features] as [String : Any]
+        let requests = ["requests": [request]]
+        let url = "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCfco-EYtj2rFBxF9VEq9xQu7QXVKtFcTY"
         
-
-       let str = String(data: jsonData, encoding: .utf8)
-        print(str)
+        if let data = try? JSONSerialization.data(withJSONObject: requests, options: .prettyPrinted),
+            let str = String(data: data, encoding: .utf8) {
+            print(str)
+        }
         
+        Alamofire.request(url, method: .post, parameters: requests, encoding: JSONEncoding.default, headers: [:]).responseJSON { (response) in
+            switch response.result {
+            case .success(let data):
+                print("data", data)
+                print(response.result)
+            case .failure(let error):
+                print(error)
+            }
+        }
         
-       // let json = String(data: jsonData!, encoding: String.Encoding.utf8)
-        //print(json)
     }
 }

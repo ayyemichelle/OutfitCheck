@@ -9,6 +9,15 @@
 import Foundation
 
 struct Image: Codable {
+    
     var content:String
     
+    enum Codingkeys: String, CodingKey {
+        case content = "content"
+    }
+    func encode(to encoder: Encoder) throws {
+         var container = encoder.container(keyedBy: CodingKeys.self)
+         try container.encode(self.content, forKey: .content)
+         
+       }
 }

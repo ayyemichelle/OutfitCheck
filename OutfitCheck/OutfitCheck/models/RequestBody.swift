@@ -10,6 +10,18 @@ import Foundation
 
 struct RequestBody: Codable {
     
-    var request:[Request]
+    var requests:[Request]
+    
+    enum CodingKeys: String, CodingKey {
+        case requests = "requests"
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.requests, forKey: .requests)
+       
+    }
+    
+    
     
 }
