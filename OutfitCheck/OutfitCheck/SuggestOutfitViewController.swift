@@ -17,7 +17,12 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     var city: String = ""
     @IBOutlet weak var locationLabel: UILabel!
     
-    let myPickerData = [String](arrayLiteral: "Test", "Test2")
+    @IBOutlet weak var picker: UIPickerView!
+    var pickerData : [String] = [String]()
+    
+    @IBOutlet weak var startTimePicker: UIDatePicker!
+    @IBOutlet weak var endTimePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -27,10 +32,17 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         sendOpenWeatherRequest()
         //print(city)
         
+        // connect data to picker
+        self.picker.delegate = self
+        self.picker.dataSource = self
         
+        // input outfite categories
+        pickerData = ["Casual", "Business", "Formal", "Athletic"]
     }
     
-
+    @IBAction func onSuggestButton(_ sender: Any) {
+    }
+    
     @IBAction func onBackButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -40,11 +52,11 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return myPickerData.count
+        return pickerData.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return myPickerData[row]
+        return pickerData[row]
     }
     
     func sendOpenWeatherRequest(){
