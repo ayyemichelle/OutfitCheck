@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AlamofireImage
 
 class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -98,9 +99,14 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         }
     }
     
+    
+    
+    // why don't we use the func above?
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
         picker.dismiss(animated: true)
         img = image
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageScaled(to: size)
         print(img.size)
     }
     

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */; };
 		0AC33A64D76FF558A569EF4D /* libPods-OutfitCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */; };
 		A292E9F517129164676FFB08 /* libPods-OutfitCheckTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C3C8FB5BC9449FEEC368EA /* libPods-OutfitCheckTests.a */; };
 		A5BEC2D9B1E2D529D5AD676E /* libPods-OutfitCheck-OutfitCheckUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA76D836A1ACF91ABDB1AA1 /* libPods-OutfitCheck-OutfitCheckUITests.a */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVisionAPICaller.swift; sourceTree = "<group>"; };
 		103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OutfitCheck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122A03A85430E5B51C86403D /* Pods-OutfitCheckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheckTests.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheckTests/Pods-OutfitCheckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		145B9F4465C902AEC2A32974 /* Pods-OutfitCheckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheckTests.release.xcconfig"; path = "Target Support Files/Pods-OutfitCheckTests/Pods-OutfitCheckTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,10 +112,16 @@
 		04416D2B2422C9F000E9EAD5 /* base64 */ = {
 			isa = PBXGroup;
 			children = (
-				04416D2D2422CA2700E9EAD5 /* MF_Base64Additions.h */,
-				04416D2C2422CA2600E9EAD5 /* MF_Base64Additions.m */,
 			);
 			path = base64;
+			sourceTree = "<group>";
+		};
+		04416D322423500C00E9EAD5 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 		9C71AD186F3AE25054E86031 /* Frameworks */ = {
@@ -174,6 +182,7 @@
 				CEDB9D0324197A73005C45F4 /* Assets.xcassets */,
 				CEDB9D0524197A73005C45F4 /* LaunchScreen.storyboard */,
 				CEDB9D0824197A73005C45F4 /* Info.plist */,
+				04416D322423500C00E9EAD5 /* helpers */,
 				04416D2B2422C9F000E9EAD5 /* base64 */,
 				CE3F97D9241B3475002B1E89 /* fonts */,
 				CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */,
@@ -419,12 +428,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3F97D42419DB07002B1E89 /* WelcomeViewController.swift in Sources */,
+				04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */,
 				CE3F97D8241AF4FD002B1E89 /* OutfitCheckViewController.swift in Sources */,
 				ADD97BFB2422F60000F30277 /* SuggestResultViewController.swift in Sources */,
 				CEDB9CFB24197A70005C45F4 /* AppDelegate.swift in Sources */,
 				CE3F97D6241ACE33002B1E89 /* SuggestOutfitViewController.swift in Sources */,
 				CEDB9CFD24197A70005C45F4 /* SceneDelegate.swift in Sources */,
-				04416D2E2422CA2700E9EAD5 /* MF_Base64Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

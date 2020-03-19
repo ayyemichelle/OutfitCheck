@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DB2B17EEE15C8E869A37C1514F4D378E"
-               BuildableName = "Base64.framework"
+               BuildableName = "libBase64.a"
                BlueprintName = "Base64"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
