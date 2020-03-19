@@ -10,15 +10,31 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate {
+class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var longitude: CLLocationDegrees = 0.0
     var latitude: CLLocationDegrees = 0.0
+    
+    // pickers
+    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var startTimePicker: UIDatePicker!
+    @IBOutlet weak var endTimePicker: UIDatePicker!
+    
+    var pickerData : [String] = [String]()
+    
+    // image picker
+    var imagePicker = UIImagePickerController()
+    var img: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BlueFiresSample", size: 19) as Any]
         sendOpenWeatherRequest()
-       
+        
+        self.picker.delegate = self
+        self.picker.dataSource = self
+        
+        pickerData = ["Casual", "Business", "Formal", "Athletic"]
     }
       
       func sendOpenWeatherRequest(){
@@ -49,6 +65,45 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func onBackButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+           return pickerData[row]
+       }
+    
+    @IBAction func onTakePictureButton(_ sender: Any) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated:true)
+        }
+    }
+    
+    @IBAction func onUploadPictureButton(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = false
+
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+        picker.dismiss(animated: true)
+        img = image
+        print(img.size)
+    }
+    
     
     /*
     // MARK: - Navigation
