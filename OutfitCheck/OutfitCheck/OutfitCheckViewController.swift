@@ -101,10 +101,24 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         }
     }
     
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageScaled(to: size)
+        
+        // convert image to base 64
+        let imageData: NSData =  scaledImage.pngData()! as NSData
+        let encodedImageString = imageData.base64EncodedString(options: [])
+        
+        // send api request
+        GoogleVisionAPI.annotateImageRequest(encodedImage: encodedImageString)
+        
+        dismiss(animated: true, completion: nil)
+    }
     
     // why don't we use the func above?
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+   /* func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+        print("image picker")
         picker.dismiss(animated: true)
         img = image
         let size = CGSize(width: 300, height: 300)
@@ -114,9 +128,10 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         // convert image to base 64
         let imageData: NSData =  scaledImage.pngData()! as NSData
         let encodedImageString = imageData.base64EncodedString(options: [])
-        
+        print("converted image")
         // send api request
-    }
+        GoogleVisionAPI.annotateImageRequest(encodedImage: encodedImageString)
+    }*/
     
     
     /*
