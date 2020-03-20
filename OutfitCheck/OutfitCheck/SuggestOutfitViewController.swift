@@ -26,7 +26,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "BlueFiresSample", size: 19) as Any]
+        self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "DancingScript-Regular", size: 19) as Any]
         // Do any additional setup after loading the view.
             // OccasionPicker.delegate = self
         sendOpenWeatherRequest()
