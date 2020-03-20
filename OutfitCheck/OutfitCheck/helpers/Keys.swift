@@ -8,6 +8,6 @@
 
 import Foundation
  
-enum Keys {
+enum Keys: String {
     case google = "AIzaSyCfco-EYtj2rFBxF9VEq9xQu7QXVKtFcTY"
 }

@@ -24,7 +24,8 @@ class GoogleVisionAPI {
         let image = ["content": encodedImage]
         let request = ["image": image, "features": features] as [String : Any]
         let requests = ["requests": [request]]
-        let url = "https://vision.googleapis.com/v1/images:annotate?key=\(Keys.google)"
+        let k = Keys.google.rawValue
+        let url = "https://vision.googleapis.com/v1/images:annotate?key=\(k)"
         
         
         Alamofire.request(url, method: .post, parameters: requests, encoding: JSONEncoding.default, headers: [:]).responseJSON { (response) in
