@@ -54,9 +54,7 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
                   // data is contained in this dictionary
                   let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                   
-                  
-                  //self.movies = dataDictionary["results"] as! [[String:Any]] // need to cast as array of dictionaries
-                  
+                                    
                   print(dataDictionary)
                   
                   
@@ -115,23 +113,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         
         dismiss(animated: true, completion: nil)
     }
-    
-    // why don't we use the func above?
-   /* func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
-        print("image picker")
-        picker.dismiss(animated: true)
-        img = image
-        let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to: size)
-        print(img.size)
-        
-        // convert image to base 64
-        let imageData: NSData =  scaledImage.pngData()! as NSData
-        let encodedImageString = imageData.base64EncodedString(options: [])
-        print("converted image")
-        // send api request
-        GoogleVisionAPI.annotateImageRequest(encodedImage: encodedImageString)
-    }*/
     
     
     /*

@@ -190,6 +190,7 @@
 				CEDB9CFC24197A70005C45F4 /* SceneDelegate.swift */,
 				CEDB9D0024197A70005C45F4 /* Main.storyboard */,
 				CE3F97D7241AF4FD002B1E89 /* OutfitCheckViewController.swift */,
+				CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */,
 				CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */,
 				CEDB9D0324197A73005C45F4 /* Assets.xcassets */,
 				CEDB9D0524197A73005C45F4 /* LaunchScreen.storyboard */,
@@ -197,7 +198,6 @@
 				04416D3A24235E4C00E9EAD5 /* models */,
 				04416D322423500C00E9EAD5 /* helpers */,
 				CE3F97D9241B3475002B1E89 /* fonts */,
-				CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */,
 				ADD97BFA2422F60000F30277 /* SuggestResultViewController.swift */,
 			);
 			path = OutfitCheck;
@@ -624,13 +624,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YWNNWJ7FZF;
+				DEVELOPMENT_TEAM = B63QWCXL83;
 				INFOPLIST_FILE = OutfitCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = karla.OutfitCheck;
+				PRODUCT_BUNDLE_IDENTIFIER = michelle.OutfitCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -643,13 +643,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YWNNWJ7FZF;
+				DEVELOPMENT_TEAM = B63QWCXL83;
 				INFOPLIST_FILE = OutfitCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = karla.OutfitCheck;
+				PRODUCT_BUNDLE_IDENTIFIER = michelle.OutfitCheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
