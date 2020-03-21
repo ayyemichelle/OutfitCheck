@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */; };
 		0AC33A64D76FF558A569EF4D /* libPods-OutfitCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */; };
+		76BDEEF624259ED6006BB8A0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BDEEF524259ED6006BB8A0 /* Keys.swift */; };
 		A292E9F517129164676FFB08 /* libPods-OutfitCheckTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C3C8FB5BC9449FEEC368EA /* libPods-OutfitCheckTests.a */; };
 		A5BEC2D9B1E2D529D5AD676E /* libPods-OutfitCheck-OutfitCheckUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA76D836A1ACF91ABDB1AA1 /* libPods-OutfitCheck-OutfitCheckUITests.a */; };
-		ADD97BF92422BD4A00F30277 /* images in Resources */ = {isa = PBXBuildFile; fileRef = ADD97BF82422BD4A00F30277 /* images */; };
 		ADD97BFB2422F60000F30277 /* SuggestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD97BFA2422F60000F30277 /* SuggestResultViewController.swift */; };
 		CE073B382424711500C1233C /* DancingScript-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 761BF9BE2421D41100E73889 /* DancingScript-VariableFont_wght.ttf */; };
 		CE073B392424711800C1233C /* Oswald-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 761BF9BD2421D40B00E73889 /* Oswald-VariableFont_wght.ttf */; };
@@ -55,11 +55,12 @@
 		69DA98A8785ECD19BF55E468 /* Pods-OutfitCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheck.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheck/Pods-OutfitCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		761BF9BD2421D40B00E73889 /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		761BF9BE2421D41100E73889 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		76BDEEF524259ED6006BB8A0 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		76BDEEF72425A60B006BB8A0 /* start_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_icon.png; sourceTree = "<group>"; };
 		ADA1EC7B242326A000B84840 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA1EC7E242326A600B84840 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA1EC81242326FE00B84840 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA1EC852423270900B84840 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADD97BF82422BD4A00F30277 /* images */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = images; sourceTree = SOURCE_ROOT; };
 		ADD97BFA2422F60000F30277 /* SuggestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestResultViewController.swift; sourceTree = "<group>"; };
 		CE3F97D32419DB07002B1E89 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestOutfitViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		04416D322423500C00E9EAD5 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				76BDEEF524259ED6006BB8A0 /* Keys.swift */,
 				04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */,
 			);
 			path = helpers;
@@ -168,13 +170,13 @@
 		CEDB9CF924197A70005C45F4 /* OutfitCheck */ = {
 			isa = PBXGroup;
 			children = (
-				ADD97BF82422BD4A00F30277 /* images */,
 				CEDB9CFA24197A70005C45F4 /* AppDelegate.swift */,
 				CEDB9CFC24197A70005C45F4 /* SceneDelegate.swift */,
 				CEDB9D0024197A70005C45F4 /* Main.storyboard */,
 				CE3F97D7241AF4FD002B1E89 /* OutfitCheckViewController.swift */,
 				CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */,
 				CEDB9D0324197A73005C45F4 /* Assets.xcassets */,
+				76BDEEF72425A60B006BB8A0 /* start_icon.png */,
 				CEDB9D0524197A73005C45F4 /* LaunchScreen.storyboard */,
 				CEDB9D0824197A73005C45F4 /* Info.plist */,
 				04416D322423500C00E9EAD5 /* helpers */,
@@ -323,7 +325,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADD97BF92422BD4A00F30277 /* images in Resources */,
 				CE3F97DB241B3475002B1E89 /* bluefires_sample.ttf in Resources */,
 				CEDB9D0724197A73005C45F4 /* LaunchScreen.storyboard in Resources */,
 				CE073B382424711500C1233C /* DancingScript-VariableFont_wght.ttf in Resources */,
@@ -424,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3F97D42419DB07002B1E89 /* WelcomeViewController.swift in Sources */,
+				76BDEEF624259ED6006BB8A0 /* Keys.swift in Sources */,
 				04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */,
 				CE3F97D8241AF4FD002B1E89 /* OutfitCheckViewController.swift in Sources */,
 				ADD97BFB2422F60000F30277 /* SuggestResultViewController.swift in Sources */,
