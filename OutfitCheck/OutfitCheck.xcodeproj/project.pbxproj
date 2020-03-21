@@ -57,7 +57,6 @@
 		761BF9BD2421D40B00E73889 /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		761BF9BE2421D41100E73889 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		76BDEEF524259ED6006BB8A0 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		76BDEEF72425A60B006BB8A0 /* start_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_icon.png; sourceTree = "<group>"; };
 		76BDEEF82425B269006BB8A0 /* OutfitCheckResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitCheckResultViewController.swift; sourceTree = "<group>"; };
 		ADA1EC7B242326A000B84840 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA1EC7E242326A600B84840 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +177,6 @@
 				CE3F97D7241AF4FD002B1E89 /* OutfitCheckViewController.swift */,
 				CE3F97D5241ACE33002B1E89 /* SuggestOutfitViewController.swift */,
 				CEDB9D0324197A73005C45F4 /* Assets.xcassets */,
-				76BDEEF72425A60B006BB8A0 /* start_icon.png */,
 				CEDB9D0524197A73005C45F4 /* LaunchScreen.storyboard */,
 				CEDB9D0824197A73005C45F4 /* Info.plist */,
 				04416D322423500C00E9EAD5 /* helpers */,
