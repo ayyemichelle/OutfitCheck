@@ -32,7 +32,7 @@
                                         <fragment content="Suggest an Outfit">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="30" name="Oswald-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="30"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -58,7 +58,7 @@
                                         <fragment content="Outfit Check">
                                             <attributes>
                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="30" name="Oswald-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="30"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -73,11 +73,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVU-AO-3IY">
-                                <rect key="frame" x="60" y="16" width="294" height="63"/>
+                                <rect key="frame" x="60" y="16" width="294" height="64.666666666666671"/>
                                 <attributedString key="attributedText">
                                     <fragment content="WELCOME">
                                         <attributes>
-                                            <font key="NSFont" size="54" name="Oswald-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="54"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
