@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */; };
+		04AA6CD72426F6C5000A4AC6 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6CD62426F6C5000A4AC6 /* Keys.swift */; };
 		0AC33A64D76FF558A569EF4D /* libPods-OutfitCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */; };
 		76BDEEF624259ED6006BB8A0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BDEEF524259ED6006BB8A0 /* Keys.swift */; };
 		76BDEEF92425B26A006BB8A0 /* OutfitCheckResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BDEEF82425B269006BB8A0 /* OutfitCheckResultViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVisionAPICaller.swift; sourceTree = "<group>"; };
+		04AA6CD62426F6C5000A4AC6 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OutfitCheck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122A03A85430E5B51C86403D /* Pods-OutfitCheckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheckTests.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheckTests/Pods-OutfitCheckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		145B9F4465C902AEC2A32974 /* Pods-OutfitCheckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheckTests.release.xcconfig"; path = "Target Support Files/Pods-OutfitCheckTests/Pods-OutfitCheckTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				76BDEEF524259ED6006BB8A0 /* Keys.swift */,
 				04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */,
+				04AA6CD62426F6C5000A4AC6 /* Keys.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -426,7 +429,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3F97D42419DB07002B1E89 /* WelcomeViewController.swift in Sources */,
+<<<<<<< HEAD
 				76BDEEF624259ED6006BB8A0 /* Keys.swift in Sources */,
+=======
+				04AA6CD72426F6C5000A4AC6 /* Keys.swift in Sources */,
+>>>>>>> master
 				04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */,
 				CE3F97D8241AF4FD002B1E89 /* OutfitCheckViewController.swift in Sources */,
 				ADD97BFB2422F60000F30277 /* SuggestResultViewController.swift in Sources */,
