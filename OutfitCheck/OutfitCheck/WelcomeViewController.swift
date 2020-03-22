@@ -18,9 +18,17 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     var latitude: CLLocationDegrees = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+        /*
+        for family in UIFont.familyNames {
+
+            let sName: String = family as String
+            print("family: \(sName)")
+                    
+            for name in UIFont.fontNames(forFamilyName: sName) {
+                print("name: \(name as String)")
+            }
+        }
+        */
         // API call to Open Weather API - need to move to correct view controller
         // get user's location
         locationManager.delegate = self
