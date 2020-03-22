@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */; };
-		04AA6CD72426F6C5000A4AC6 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA6CD62426F6C5000A4AC6 /* Keys.swift */; };
 		0AC33A64D76FF558A569EF4D /* libPods-OutfitCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */; };
+		761D5DFB2427209700B4795A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761D5DFA2427209700B4795A /* Keys.swift */; };
 		A292E9F517129164676FFB08 /* libPods-OutfitCheckTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C3C8FB5BC9449FEEC368EA /* libPods-OutfitCheckTests.a */; };
 		A5BEC2D9B1E2D529D5AD676E /* libPods-OutfitCheck-OutfitCheckUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA76D836A1ACF91ABDB1AA1 /* libPods-OutfitCheck-OutfitCheckUITests.a */; };
 		ADD97BF92422BD4A00F30277 /* images in Resources */ = {isa = PBXBuildFile; fileRef = ADD97BF82422BD4A00F30277 /* images */; };
@@ -48,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleVisionAPICaller.swift; sourceTree = "<group>"; };
-		04AA6CD62426F6C5000A4AC6 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		103768C88745C2CCECCD85A1 /* libPods-OutfitCheck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OutfitCheck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		122A03A85430E5B51C86403D /* Pods-OutfitCheckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheckTests.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheckTests/Pods-OutfitCheckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		145B9F4465C902AEC2A32974 /* Pods-OutfitCheckTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheckTests.release.xcconfig"; path = "Target Support Files/Pods-OutfitCheckTests/Pods-OutfitCheckTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		69DA98A8785ECD19BF55E468 /* Pods-OutfitCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitCheck.debug.xcconfig"; path = "Target Support Files/Pods-OutfitCheck/Pods-OutfitCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		761BF9BD2421D40B00E73889 /* Oswald-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		761BF9BE2421D41100E73889 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		761D5DFA2427209700B4795A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		ADA1EC7B242326A000B84840 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA1EC7E242326A600B84840 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA1EC81242326FE00B84840 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				04416D332423505800E9EAD5 /* GoogleVisionAPICaller.swift */,
-				04AA6CD62426F6C5000A4AC6 /* Keys.swift */,
+				761D5DFA2427209700B4795A /* Keys.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -427,7 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3F97D42419DB07002B1E89 /* WelcomeViewController.swift in Sources */,
-				04AA6CD72426F6C5000A4AC6 /* Keys.swift in Sources */,
+				761D5DFB2427209700B4795A /* Keys.swift in Sources */,
 				04416D342423505800E9EAD5 /* GoogleVisionAPICaller.swift in Sources */,
 				CE3F97D8241AF4FD002B1E89 /* OutfitCheckViewController.swift in Sources */,
 				ADD97BFB2422F60000F30277 /* SuggestResultViewController.swift in Sources */,
