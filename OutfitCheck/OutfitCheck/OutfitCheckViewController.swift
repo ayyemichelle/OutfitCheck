@@ -142,12 +142,19 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     }
     
     // why don't we use the func above?
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
-        picker.dismiss(animated: true)
-        img = image
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
         let size = CGSize(width: 300, height: 300)
         let scaledImage = image.af_imageScaled(to: size)
-        print(img.size)
+        
+        // convert image to base 64
+        let imageData: NSData =  scaledImage.pngData()! as NSData
+        let encodedImageString = imageData.base64EncodedString(options: .lineLength64Characters)
+        
+        // send api request
+        GoogleVisionAPI.annotateImageRequest(encodedImage: encodedImageString)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     func computeOutfit() {
