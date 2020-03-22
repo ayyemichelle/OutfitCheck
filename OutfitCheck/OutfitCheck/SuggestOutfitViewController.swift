@@ -37,7 +37,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         self.picker.dataSource = self
         
         // input outfite categories
-        pickerData = ["Casual", "Business", "Formal", "Athletic"]
+        pickerData = ["Casual", "Business", "Athletic"]
     }
     
     @IBAction func onSuggestButton(_ sender: Any) {
