@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lcL-cf-aGK">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="DancingScript-VariableFont_wght.ttf">
+            <string>DancingScript-Regular</string>
+        </array>
         <array key="Oswald-VariableFont_wght.ttf">
             <string>Oswald-Regular</string>
         </array>
@@ -17,99 +20,62 @@
             <objects>
                 <viewController title="WelcomeViewController" id="lcL-cf-aGK" customClass="WelcomeViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="95x-fz-35V">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOK-WC-e33">
-                                <rect key="frame" x="60" y="416" width="294" height="120"/>
-                                <color key="backgroundColor" red="0.76862745098039209" green="0.89803921568627454" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="NES-E4-QmF"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Suggest an Outfit">
-                                            <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="30" name="Oswald-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="pfT-fV-kZX" kind="show" identifier="suggestOutfit" id="Cu2-iX-wC8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rbo-jC-730">
-                                <rect key="frame" x="60" y="561" width="294" height="120"/>
-                                <color key="backgroundColor" red="0.76877796649999997" green="0.89869898560000006" blue="0.89112460609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="Jst-et-UFv"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Outfit Check">
-                                            <attributes>
-                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <font key="NSFont" size="30" name="Oswald-Regular"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="cwB-me-YmN" kind="show" identifier="outfitCheck" id="h47-Gv-J3C"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVU-AO-3IY">
-                                <rect key="frame" x="60" y="16" width="294" height="63"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="WELCOME">
-                                        <attributes>
-                                            <font key="NSFont" size="54" name="Oswald-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Need an outfit check?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="out-y4-PUD">
+                                <rect key="frame" x="91" y="188" width="232" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DancingScript-Regular" family="Dancing Script" pointSize="30"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q20-vP-utU">
+                                <rect key="frame" x="98" y="99" width="219" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSN-hU-BtU">
+                                <rect key="frame" x="72" y="548" width="270" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76862745098039209" green="0.89803921568627454" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="30"/>
+                                <state key="normal" title="Outfit Check">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cwB-me-YmN" kind="show" id="7bd-ek-tdC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLT-2T-rJf">
+                                <rect key="frame" x="72" y="419" width="270" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.8980392157" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="30"/>
+                                <state key="normal" title="Suggest an Outfit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pfT-fV-kZX" kind="show" id="BID-a1-BHh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="trailing" secondItem="aVU-AO-3IY" secondAttribute="trailing" constant="60" id="0ix-LY-xii"/>
-                            <constraint firstItem="Rbo-jC-730" firstAttribute="top" secondItem="VOK-WC-e33" secondAttribute="bottom" constant="25" id="6aB-nI-2fW"/>
-                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="bottom" secondItem="VOK-WC-e33" secondAttribute="bottom" constant="200" id="7BS-DX-vo5"/>
-                            <constraint firstItem="Rbo-jC-730" firstAttribute="leading" secondItem="fbE-Ys-EeO" secondAttribute="leading" constant="60" id="7r0-3f-5R8"/>
-                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="trailing" secondItem="Rbo-jC-730" secondAttribute="trailing" constant="60" id="LmH-yr-8ZJ"/>
-                            <constraint firstItem="aVU-AO-3IY" firstAttribute="leading" secondItem="fbE-Ys-EeO" secondAttribute="leading" constant="60" id="NRU-mj-LjA"/>
-                            <constraint firstItem="VOK-WC-e33" firstAttribute="leading" secondItem="fbE-Ys-EeO" secondAttribute="leading" constant="60" id="NwA-l1-MOl"/>
-                            <constraint firstItem="fbE-Ys-EeO" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="VOK-WC-e33" secondAttribute="trailing" constant="60" id="gHb-af-xMu"/>
-                            <constraint firstItem="aVU-AO-3IY" firstAttribute="top" secondItem="fbE-Ys-EeO" secondAttribute="top" constant="16" id="mjD-rq-PDH"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fbE-Ys-EeO"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWO-ej-SKI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="138.0809595202399"/>
+            <point key="canvasLocation" x="128.98550724637681" y="136.95652173913044"/>
         </scene>
         <!--SuggestOutfitViewController-->
         <scene sceneID="dol-hE-67E">
             <objects>
                 <viewController title="SuggestOutfitViewController" id="JQ2-Fv-pGB" customClass="SuggestOutfitViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWW-9h-Say">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOL-hY-aEq">
@@ -181,7 +147,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVB-HC-3PP">
-                                <rect key="frame" x="60" y="535" width="255" height="50"/>
+                                <rect key="frame" x="79" y="536" width="255" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76862745098039209" green="0.89803921568627454" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="30"/>
@@ -190,7 +156,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onSuggestButton:" destination="JQ2-Fv-pGB" eventType="touchUpInside" id="RHJ-wq-jO6"/>
-                                    <segue destination="pUe-m4-fCD" kind="presentation" id="yoO-PE-Y3j"/>
+                                    <segue destination="qzf-C8-SiH" kind="presentation" id="yoO-PE-Y3j"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -221,22 +187,180 @@
             <objects>
                 <viewController id="pUe-m4-fCD" customClass="SuggestResultViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bnN-yJ-NcE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Suggested Fit " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3F-kw-QOI">
+                                <rect key="frame" x="11" y="71.5" width="280.5" height="59.5"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="57R-bg-dxm">
+                                <rect key="frame" x="20" y="180" width="372" height="95.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VqO-Jy-wGp" userLabel="Jacket">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="95.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diU-vi-W8L">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="70"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jacket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YE8-1z-uhf">
+                                                <rect key="frame" x="0.0" y="70" width="75" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eek-OJ-LS0" userLabel="Top">
+                                        <rect key="frame" x="99" y="0.0" width="75" height="95.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dYA-9a-TjQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="70"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cg8-H0-z85">
+                                                <rect key="frame" x="0.0" y="70" width="75" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pJj-7R-NUk" userLabel="Bottoms">
+                                        <rect key="frame" x="198" y="0.0" width="75" height="95.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="otz-UA-Ghe">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="70"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottoms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2h-jg-d0p">
+                                                <rect key="frame" x="0.0" y="70" width="75" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4ax-xo-iBH" userLabel="Shoes">
+                                        <rect key="frame" x="297" y="0.0" width="75" height="95.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SU4-9X-Zk6">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="70"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="An3-QT-PX2">
+                                                <rect key="frame" x="0.0" y="70" width="75" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pJj-7R-NUk" firstAttribute="leading" secondItem="57R-bg-dxm" secondAttribute="leading" constant="198" id="NyP-AQ-mKt"/>
+                                    <constraint firstItem="Eek-OJ-LS0" firstAttribute="leading" secondItem="57R-bg-dxm" secondAttribute="leading" constant="99" id="lCL-YP-Gq3"/>
+                                    <constraint firstItem="4ax-xo-iBH" firstAttribute="leading" secondItem="57R-bg-dxm" secondAttribute="leading" constant="297" id="zU0-D6-WiA"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-YS-iZW">
+                                <rect key="frame" x="101" y="403" width="210" height="147"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JwG-P0-eJt" userLabel="start_weather">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="147"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o6m-1x-SL1">
+                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="75"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start: 4:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMg-7U-1NI">
+                                                <rect key="frame" x="0.0" y="75" width="104.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp: 72 F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtK-oR-PFf">
+                                                <rect key="frame" x="0.0" y="99" width="104.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: windy " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFL-Ke-weg">
+                                                <rect key="frame" x="0.0" y="123" width="104.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xAy-Wc-COn" userLabel="start_weather">
+                                        <rect key="frame" x="104.5" y="0.0" width="105.5" height="147"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-rO-rDs">
+                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="75"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End: 8:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGr-iM-qp7">
+                                                <rect key="frame" x="0.0" y="75" width="105.5" height="24"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp: 65 F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UD-tB-LXl">
+                                                <rect key="frame" x="0.0" y="99" width="105.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: windy " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T8-HA-MVk">
+                                                <rect key="frame" x="0.0" y="123" width="105.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xAy-Wc-COn" firstAttribute="leading" secondItem="Nd3-YS-iZW" secondAttribute="leading" constant="104.5" id="pGf-5P-cdh"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Day at a Glance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1e-2O-Lfg">
+                                <rect key="frame" x="20" y="335" width="301" height="60"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="f1e-2O-Lfg" firstAttribute="top" secondItem="57R-bg-dxm" secondAttribute="bottom" constant="59.5" id="0KO-ev-kbh"/>
+                            <constraint firstItem="Nd3-YS-iZW" firstAttribute="leading" secondItem="PJD-pd-G8u" secondAttribute="leading" constant="101" id="Da3-i0-iJv"/>
+                            <constraint firstItem="57R-bg-dxm" firstAttribute="top" secondItem="bnN-yJ-NcE" secondAttribute="top" constant="180" id="Dyt-Fk-lvR"/>
+                            <constraint firstItem="K3F-kw-QOI" firstAttribute="leading" secondItem="PJD-pd-G8u" secondAttribute="leading" constant="11" id="Gmm-Nz-cHS"/>
+                            <constraint firstItem="57R-bg-dxm" firstAttribute="centerX" secondItem="Nd3-YS-iZW" secondAttribute="centerX" id="I1m-h7-PjL"/>
+                            <constraint firstAttribute="bottom" secondItem="57R-bg-dxm" secondAttribute="bottom" constant="566.5" id="LW9-ww-fXQ"/>
+                            <constraint firstItem="PJD-pd-G8u" firstAttribute="trailing" secondItem="57R-bg-dxm" secondAttribute="trailing" constant="22" id="NXs-3K-Rlm"/>
+                            <constraint firstItem="57R-bg-dxm" firstAttribute="leading" secondItem="f1e-2O-Lfg" secondAttribute="leading" id="Zdl-ak-GsH"/>
+                            <constraint firstItem="PJD-pd-G8u" firstAttribute="bottom" secondItem="Nd3-YS-iZW" secondAttribute="bottom" constant="258" id="btW-yc-VXa"/>
+                            <constraint firstItem="57R-bg-dxm" firstAttribute="leading" secondItem="bnN-yJ-NcE" secondAttribute="leadingMargin" id="diw-SV-w0e"/>
+                            <constraint firstItem="Nd3-YS-iZW" firstAttribute="top" secondItem="f1e-2O-Lfg" secondAttribute="bottom" constant="8" id="nFS-XY-JMf"/>
+                            <constraint firstItem="57R-bg-dxm" firstAttribute="top" secondItem="K3F-kw-QOI" secondAttribute="bottom" constant="49" id="zmg-aV-5yD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PJD-pd-G8u"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GcJ-Sc-ctc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUQ-G9-6Lo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2978" y="138"/>
+            <point key="canvasLocation" x="4011.594202898551" y="136.60714285714286"/>
         </scene>
         <!--OutfitCheckViewController-->
         <scene sceneID="vIl-de-e7l">
             <objects>
                 <viewController title="OutfitCheckViewController" id="XiQ-X0-pyW" customClass="OutfitCheckViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0gG-Qb-omg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mY-fu-Zpk">
@@ -300,20 +424,8 @@
                                 <rect key="frame" x="39" y="443" width="335" height="68"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU9-8y-9RJ">
-                                <rect key="frame" x="21" y="513" width="150" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.76862745099999996" green="0.8980392157" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="20"/>
-                                <state key="normal" title="Upload a Picture">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onUploadPictureButton:" destination="XiQ-X0-pyW" eventType="touchUpInside" id="xey-G2-Gp2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wui-Cn-awW">
-                                <rect key="frame" x="204" y="513" width="150" height="44"/>
+                                <rect key="frame" x="132" y="613" width="150" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.8980392157" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="20"/>
@@ -325,7 +437,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoo-ix-Y7v">
-                                <rect key="frame" x="112" y="569" width="150" height="44"/>
+                                <rect key="frame" x="131" y="678" width="150" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76862745099999996" green="0.8980392157" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="20"/>
@@ -333,7 +445,26 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Eaa-7Z-P8M" kind="presentation" id="syk-Ml-cSv"/>
+                                    <segue destination="zyv-zB-VDA" kind="presentation" id="syk-Ml-cSv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Outfit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBw-TB-p1F">
+                                <rect key="frame" x="16" y="502" width="265" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ3-iJ-HqU">
+                                <rect key="frame" x="131" y="555" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.8980392157" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="20"/>
+                                <state key="normal" title="Upload a Picture">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTakePictureButton:" destination="XiQ-X0-pyW" eventType="touchUpInside" id="0dx-Qz-BgF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -358,20 +489,157 @@
             </objects>
             <point key="canvasLocation" x="2245.5999999999999" y="892.80359820089961"/>
         </scene>
-        <!--View Controller-->
+        <!--Outfit Check Result View Controller-->
         <scene sceneID="Dnh-JT-BAr">
             <objects>
-                <viewController id="Eaa-7Z-P8M" sceneMemberID="viewController">
+                <viewController id="Eaa-7Z-P8M" customClass="OutfitCheckResultViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uRB-T8-vBo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Day at a Glance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C2-GD-KSI">
+                                <rect key="frame" x="113" y="187" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Fit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4I-uy-oBn">
+                                <rect key="frame" x="11" y="71" width="112.5" height="59.5"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rXK-FZ-6er">
+                                <rect key="frame" x="87" y="138.5" width="240" height="128.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Suggestions " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOF-V8-CfA">
+                                <rect key="frame" x="11" y="293" width="244.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HgL-lr-Mbc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Day at a Glance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIC-Kk-c79">
+                                <rect key="frame" x="20" y="467" width="301" height="60"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="177" translatesAutoresizingMaskIntoConstraints="NO" id="2yZ-LN-JIG">
+                                <rect key="frame" x="33" y="361" width="327" height="75"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FZI-4n-bx5">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="8HN-Zu-CuA"/>
+                                            <constraint firstAttribute="width" constant="75" id="Ngz-LJ-eYs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What a cute fit! Pair this outfit with a light jacket. It might get chilly later!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGE-1Z-xYl">
+                                        <rect key="frame" x="252" y="0.0" width="75" height="75"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IGE-1Z-xYl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FZI-4n-bx5" secondAttribute="trailing" constant="10" id="tkr-pN-YTh"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQo-B0-9pG">
+                                <rect key="frame" x="91" y="553" width="211" height="147"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IA4-AP-qec" userLabel="start_weather">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="147"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sj0-pG-TrY">
+                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="75"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start: 4:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-Zc-CI4">
+                                                <rect key="frame" x="0.0" y="75" width="104.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp: 72 F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpN-PO-3Wb">
+                                                <rect key="frame" x="0.0" y="99" width="104.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: windy " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKH-Pi-saf">
+                                                <rect key="frame" x="0.0" y="123" width="104.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dF6-ol-gxW" userLabel="start_weather">
+                                        <rect key="frame" x="104.5" y="0.0" width="106.5" height="147"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-f7-OqO">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="75"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End: 8:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdc-JT-5h2">
+                                                <rect key="frame" x="0.0" y="75" width="106.5" height="24"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp: 65 F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUJ-iq-zf0">
+                                                <rect key="frame" x="0.0" y="99" width="106.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: windy " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibv-zz-0Jk">
+                                                <rect key="frame" x="0.0" y="123" width="106.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dF6-ol-gxW" firstAttribute="leading" secondItem="QQo-B0-9pG" secondAttribute="leading" constant="104.5" id="JMm-tc-3H5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vOF-V8-CfA" firstAttribute="leading" secondItem="ztk-m1-gIo" secondAttribute="leading" constant="11" id="6TY-70-Coe"/>
+                            <constraint firstItem="QQo-B0-9pG" firstAttribute="top" secondItem="uRB-T8-vBo" secondAttribute="top" constant="553" id="7a7-k9-HfC"/>
+                            <constraint firstItem="rXK-FZ-6er" firstAttribute="centerX" secondItem="uRB-T8-vBo" secondAttribute="centerX" id="Cd6-0S-yuA"/>
+                            <constraint firstItem="rXK-FZ-6er" firstAttribute="leading" secondItem="ztk-m1-gIo" secondAttribute="leading" constant="87" id="Ew2-hS-aDJ"/>
+                            <constraint firstItem="vOF-V8-CfA" firstAttribute="leading" secondItem="E4I-uy-oBn" secondAttribute="leading" id="Mo9-Fz-Fct"/>
+                            <constraint firstItem="QQo-B0-9pG" firstAttribute="leading" secondItem="ztk-m1-gIo" secondAttribute="leading" constant="91" id="NQ7-Ig-kOq"/>
+                            <constraint firstItem="2yZ-LN-JIG" firstAttribute="top" secondItem="vOF-V8-CfA" secondAttribute="bottom" constant="8" symbolic="YES" id="NRl-dz-15K"/>
+                            <constraint firstItem="vOF-V8-CfA" firstAttribute="top" secondItem="rXK-FZ-6er" secondAttribute="bottom" constant="26" id="Nsq-dO-wDK"/>
+                            <constraint firstItem="QQo-B0-9pG" firstAttribute="centerX" secondItem="2yZ-LN-JIG" secondAttribute="centerX" id="c02-Zy-2MJ"/>
+                            <constraint firstItem="2yZ-LN-JIG" firstAttribute="leading" secondItem="ztk-m1-gIo" secondAttribute="leading" constant="33" id="d4p-A0-JbP"/>
+                            <constraint firstItem="ztk-m1-gIo" firstAttribute="bottom" secondItem="QQo-B0-9pG" secondAttribute="bottom" constant="108" id="dyt-GN-22Z"/>
+                            <constraint firstItem="vOF-V8-CfA" firstAttribute="top" secondItem="uRB-T8-vBo" secondAttribute="top" constant="293" id="gJh-Cg-dei"/>
+                            <constraint firstItem="QQo-B0-9pG" firstAttribute="top" secondItem="PIC-Kk-c79" secondAttribute="bottom" constant="26" id="l0A-Uv-m5f"/>
+                            <constraint firstItem="PIC-Kk-c79" firstAttribute="leading" secondItem="uRB-T8-vBo" secondAttribute="leadingMargin" id="lIh-gg-SY5"/>
+                            <constraint firstItem="PIC-Kk-c79" firstAttribute="top" secondItem="2yZ-LN-JIG" secondAttribute="bottom" constant="31" id="tGA-ut-QdV"/>
+                            <constraint firstItem="rXK-FZ-6er" firstAttribute="top" secondItem="E4I-uy-oBn" secondAttribute="bottom" constant="8" symbolic="YES" id="vzv-nA-TNg"/>
+                            <constraint firstItem="E4I-uy-oBn" firstAttribute="top" secondItem="ztk-m1-gIo" secondAttribute="top" constant="15" id="yhp-T5-W8Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ztk-m1-gIo"/>
                     </view>
+                    <navigationItem key="navigationItem" id="78z-ZN-Yoj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnb-fC-S0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3012" y="893"/>
+            <point key="canvasLocation" x="3921.739130434783" y="892.63392857142856"/>
         </scene>
         <!--Outfit Check-->
         <scene sceneID="bW0-pe-F0O">
@@ -380,7 +648,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Outfit Check" id="CAZ-IP-r8l"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cn1-Np-bCB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -403,7 +671,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ayG-AE-PeU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jp9-HA-57w">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -415,6 +683,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8B-PZ-GcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1308" y="893"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="weZ-Un-plh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qzf-C8-SiH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bOq-n7-aeT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pUe-m4-fCD" kind="relationship" relationship="rootViewController" id="7Ze-gD-uY4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ui-pq-TLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3102.898550724638" y="136.95652173913044"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XSb-9X-0qA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zyv-zB-VDA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nBO-U8-Kkw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Eaa-7Z-P8M" kind="relationship" relationship="rootViewController" id="f6u-vT-akM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZQ-bY-gwE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3103" y="893"/>
         </scene>
     </scenes>
     <resources>
