@@ -132,8 +132,7 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        occasion = pickerData[row]
-        return pickerData[row]
+           return pickerData[row]
        }
     
     @IBAction func onTakePictureButton(_ sender: Any) {
@@ -243,9 +242,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
          4. Otherwise, if match found flag as True, continue to next key iteration
          */
         var res : [String : Bool] = ["temp" : false]
-        
-        
-        
         return res
     }
     

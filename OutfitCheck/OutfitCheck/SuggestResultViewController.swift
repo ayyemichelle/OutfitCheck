@@ -19,6 +19,9 @@ class SuggestResultViewController: UIViewController {
         print(outfitCheckResult)
     }
 
+    
+    
+    
     /*
     // MARK: - Navigation
 
