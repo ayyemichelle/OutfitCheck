@@ -387,6 +387,24 @@
                         <viewLayoutGuide key="safeArea" id="PJD-pd-G8u"/>
                     </view>
                     <navigationItem key="navigationItem" id="p1G-mk-Vg4"/>
+                    <connections>
+                        <outlet property="bottomImage" destination="8kA-G4-3Z9" id="FEX-mv-jBl"/>
+                        <outlet property="bottomLabel" destination="dbO-oD-8Vg" id="INz-iQ-spt"/>
+                        <outlet property="endConditions" destination="E9F-ah-MoW" id="Pkw-tq-yWO"/>
+                        <outlet property="endImage" destination="fE0-or-Mj7" id="D0N-SA-suQ"/>
+                        <outlet property="endTemp" destination="Jhs-WO-bii" id="nQi-Le-S17"/>
+                        <outlet property="endTime" destination="K0l-ff-3sa" id="amP-6Z-cai"/>
+                        <outlet property="outerwearImage" destination="zRE-J2-gg8" id="Tlc-2q-E7s"/>
+                        <outlet property="outwearLabel" destination="2xi-Gc-SzT" id="y1u-FL-7Kg"/>
+                        <outlet property="shoeImage" destination="icF-t4-g08" id="tcf-Jt-3wd"/>
+                        <outlet property="shoeLabel" destination="0qC-RC-A5W" id="cOF-by-aLw"/>
+                        <outlet property="startConditions" destination="gu8-ml-nhR" id="xYl-dn-oTl"/>
+                        <outlet property="startImage" destination="dwt-D7-d2t" id="7Yp-gF-LdQ"/>
+                        <outlet property="startTemp" destination="Aau-cO-Tbe" id="D09-Yg-4BO"/>
+                        <outlet property="startTime" destination="JrO-JV-WFu" id="wkz-Zr-Vga"/>
+                        <outlet property="topImage" destination="5im-J5-hKG" id="3Tv-dm-Bxl"/>
+                        <outlet property="topLabel" destination="0qb-LZ-gnM" id="oky-pd-ckX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUQ-G9-6Lo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
