@@ -11,11 +11,15 @@ import MapKit
 import CoreLocation
 import AlamofireImage
 
+var outfitCheckResult : [String : String] = [:]
+
 class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var locManager = CLLocationManager()
     var longitude: CLLocationDegrees = 0.0
     var latitude: CLLocationDegrees = 0.0
+    var currentCondition : String = ""
+    var currentTemp : Double = 0.0
     
     // pickers
     @IBOutlet weak var picker: UIPickerView!
@@ -30,10 +34,8 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     var imagePicker = UIImagePickerController()
     var img: UIImage!
     
-    // weather data
+    // weather condition codes
     let conditions: [String] = ["Clear", "Drizzle", "Snow", "Rain", "Clouds", "Thunderstorm"]
-    var currentCondition : String = ""
-    var currentTemp : Double = 0.0
     
     // Attire objects (info can be found in Attire.swift)
     let casual = Attire.init(
@@ -90,7 +92,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
       
       func sendOpenWeatherRequest(){
           let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=2cf95422cb657b66ba44c983634b53a2")!
-        print(url)
                       
           let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
           let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -102,8 +103,15 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
                   // data is contained in this dictionary
                   let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                   
-                  
-                  //self.movies = dataDictionary["results"] as! [[String:Any]] // need to cast as array of dictionaries
+                if let weather = dataDictionary["weather"] as? [[String : Any]],
+                    let cond = weather[0]["main"] {
+                    self.currentCondition = cond as! String
+                }
+                
+                if let temp = dataDictionary["main"] as? [String : Double],
+                    let tempMax = temp["temp_max"], let tempMin = temp["temp_min"] {
+                    self.currentTemp = (tempMax + tempMin) / 2.0
+                }
                   
                   print(dataDictionary)
               }
@@ -185,9 +193,9 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
             case "Casual":
                 results = processImage(attire : casual, temp : temp)
                 
-                for (key, value) in results {
-                    if (value == true) {
-                        resultOutfit[key] = nil
+                for (k, v) in results {
+                    if (v == true) {
+                        resultOutfit[k] = nil
                     }
                     else {
                         print("pick a suggestion and load it into resultOutfit[key]")
@@ -198,9 +206,9 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
             case "Business":
                 results = processImage(attire : business, temp : temp)
                 
-                for (key, value) in results {
-                    if (value == true) {
-                        resultOutfit[key] = nil
+                for (k, v) in results {
+                    if (v == true) {
+                        resultOutfit[k] = nil
                     }
                     else {
                         print("pick a suggestion and load it into resultOutfit[key]")
@@ -210,9 +218,9 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
             case "Athletic":
                 results = processImage(attire : athletic, temp : temp)
                 
-                for (key, value) in results {
-                    if (value == true) {
-                        resultOutfit[key] = nil
+                for (k, v) in results {
+                    if (v == true) {
+                        resultOutfit[k] = nil
                     }
                     else {
                         print("pick a suggestion and load it into resultOutfit[key]")
@@ -222,6 +230,8 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
             default:
                 print("this shouldn't be printed")
             }
+        
+        outfitCheckResult = self.resultOutfit
     }
     
     func processImage(attire : Attire, temp : String) -> [String : Bool]{
