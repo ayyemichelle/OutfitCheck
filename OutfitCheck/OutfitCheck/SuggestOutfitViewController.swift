@@ -19,9 +19,47 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     @IBOutlet weak var picker: UIPickerView!
     var pickerData : [String] = [String]()
+    var occasion : String = ""
     
     @IBOutlet weak var startTimePicker: UIDatePicker!
     @IBOutlet weak var endTimePicker: UIDatePicker!
+    
+    // weather data
+    let conditions: [String] = ["Clear", "Drizzle", "Snow", "Rain", "Clouds", "Thunderstorm"]
+    var currentCondition : String = ""
+    var currentTemp : Double = 0.0
+    
+    // suggestion opions based on each attire type
+    let casual = Attire.init(
+    warm: ["top" : ["t-shirt"],
+           "bottom" : ["shorts/skirt", "jeans"],
+           "shoes" : ["sneakers", "sandal"],
+           "outerwear" : ["cardigan", "jacket"]],
+    cool: ["top" : ["sweater"],
+           "bottom" : ["jeans", "trousers"],
+           "shoes" : ["boot", "sneakers"],
+           "outerwear" : ["jacket", "coat"]])
+    
+    let business = Attire.init(
+    warm: ["top" : ["polo shirt", "dress shirt", "blouse"],
+           "bottom" : ["skirt/trousers"],
+           "shoes" : ["flats/loafers"],
+           "outerwear" : ["cardigan", "blazer"]],
+    cool: ["top" : ["sweater", "blouse", "dress shirt"],
+           "bottom" : ["trousers", "pants"],
+           "shoes" : ["flats/loafers"],
+           "outerwear" : ["blazer", "coat"]])
+    
+    let athletic = Attire.init(
+    warm: ["top" : ["t-shirt", "tanktop"],
+           "bottom" : ["shorts", "leggings"],
+           "shoes" : ["sneakers"],
+           "outerwear" : ["jacket"]],
+    cool: ["top" : ["sweater", "t-shirt"],
+           "bottom" : ["sweatpants", "leggings", "yoga pant", "active pants"],
+           "shoes" : ["sneakers", "footwear", "sock"],
+           "outerwear" : ["jacket"]])
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +79,8 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     @IBAction func onSuggestButton(_ sender: Any) {
+        // use predefined outfit models for each attire type
+        switch(occasion)
     }
     
     @IBAction func onBackButton(_ sender: Any) {
@@ -56,6 +96,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        occasion = pickerData[row]
         return pickerData[row]
     }
     
@@ -72,10 +113,8 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
                 // data is contained in this dictionary
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
-                self.locationLabel.text =  dataDictionary["name"] as! String
+                self.locationLabel.text =  dataDictionary["name"] as? String
                 print(dataDictionary)
-                
-                
             }
         }
         task.resume()

@@ -31,9 +31,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     
     // weather data
     let conditions: [String] = ["Clear", "Drizzle", "Snow", "Rain", "Clouds", "Thunderstorm"]
-    
-    // might make seperate temperature object for info, if keeping both start time/end time forecasts
-    // TBD
     var currentCondition : String = ""
     var currentTemp : Double = 0.0
     
@@ -100,8 +97,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
                   //self.movies = dataDictionary["results"] as! [[String:Any]] // need to cast as array of dictionaries
                   
                   print(dataDictionary)
-                  
-                  
               }
           }
           task.resume()
@@ -120,7 +115,8 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-           occasion = pickerData[row]
+        occasion = pickerData[row]
+        return pickerData[row]
        }
     
     @IBAction func onTakePictureButton(_ sender: Any) {
@@ -227,6 +223,11 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
          3. For any key that had 0 matches, flag as False (missing)
          4. Otherwise, if match found flag as True, continue to next key iteration
          */
+        var res : [String : Bool] = ["temp" : false]
+        
+        
+        
+        return res
     }
     
     /*
