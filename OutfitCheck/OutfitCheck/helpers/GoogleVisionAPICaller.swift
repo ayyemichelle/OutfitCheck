@@ -9,9 +9,11 @@
 import Foundation
 import Alamofire
 
+var imageResults = [[String : Any]]()
+
 class GoogleVisionAPI {
         
-    static func annotateImageRequest(encodedImage: String){
+    static func annotateImageRequest(encodedImage: String) {
         print("calling request")
        /* let feature = Feature(type: "IMAGE_PROPERTIES", maxResults: 10)
         let image = Image(content: "")
@@ -27,18 +29,27 @@ class GoogleVisionAPI {
         let k = Keys.google.rawValue
         let url = "https://vision.googleapis.com/v1/images:annotate?key=\(k)"
         
+        let group = DispatchGroup()
         
-        Alamofire.request(url, method: .post, parameters: requests, encoding: JSONEncoding.default, headers: [:]).responseJSON { (response) in
+        Alamofire.request(url, method: .post, parameters: requests, encoding: JSONEncoding.default, headers: [:]).responseJSON {
+            (response) in
             switch response.result {
-                case .success(let data):
-                    print("data", data)
-                    print(response.result)
-                  
+                case .success(_):
+                    group.enter()
+                    if let data = response.result.value as? [String : Any],
+                        let labels = data["responses"] as? [[String : Any]] {
+                        imageResults = labels[0]["labelAnnotations"] as! [[String : Any]]
+                }
+                      
                 case .failure(let error):
                     print(error)
-              
-                }
+            }
+            
+            group.leave()
         }
         
+        group.notify(queue: .main) {
+            print("request finished")
+        }
     }
 }
