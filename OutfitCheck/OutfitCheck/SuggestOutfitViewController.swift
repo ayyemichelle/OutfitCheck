@@ -12,6 +12,7 @@ import CoreLocation
 
 class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
 
+    var locManager = CLLocationManager()
     var longitude: CLLocationDegrees = 0.0
     var latitude: CLLocationDegrees = 0.0
     var city: String = ""
@@ -60,15 +61,21 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
            "shoes" : ["sneakers", "footwear", "sock"],
            "outerwear" : ["jacket"]])
     
+    var resultOutfit : [String :  String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "DancingScript-Regular", size: 19) as Any]
+        
         // Do any additional setup after loading the view.
-            // OccasionPicker.delegate = self
+        
+        locManager.requestWhenInUseAuthorization()
+        if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedAlways {
+            longitude = locManager.location?.coordinate.longitude ?? 0.0
+            latitude = (locManager.location?.coordinate.latitude) ?? 0.0
+        }
+        
         sendOpenWeatherRequest()
-        //print(city)
         
         // connect data to picker
         self.picker.delegate = self
@@ -80,7 +87,22 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     @IBAction func onSuggestButton(_ sender: Any) {
         // use predefined outfit models for each attire type
-        switch(occasion)
+        
+        resultOutfit = ["top" : "",
+                        "bottom" : "",
+                        "shoes" : "",
+                        "outerwear" : ""]
+        
+        switch(occasion) {
+        case "Casual":
+            print("casual selected")
+        case "Business":
+            print("business selecteed")
+        case "Athletic":
+            print("athletic selected")
+        default:
+            print("this shouldn't be printed")
+        }
     }
     
     @IBAction func onBackButton(_ sender: Any) {
