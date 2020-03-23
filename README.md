@@ -34,6 +34,6 @@ The application can do the following:<br>
 * [x] Users can edit their selection <br>
 
 ## Future Implementation 
-* [] Users can upload or take a picture to scan if their outfit is suitable for the weather
-* [] Improve the outfit generating algorithm 
-* [] Improve the UI/UX
+* [ ] Users can upload or take a picture to scan if their outfit is suitable for the weather
+* [ ] Improve the outfit generating algorithm 
+* [ ] Improve the UI/UX
