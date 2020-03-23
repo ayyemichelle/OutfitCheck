@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 
 var suggestResult : [String : String] = [:]
+var dayResult : [String : Any] = ["startTime": "", "endTime": "", "conditions": "", "temp": Double()]
 
 class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
 
@@ -28,6 +29,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     @IBOutlet weak var startTimePicker: UIDatePicker!
     @IBOutlet weak var endTimePicker: UIDatePicker!
+    
     
     // weather data
     let conditions: [String] = ["Clear", "Drizzle", "Snow", "Rain", "Clouds", "Thunderstorm"]
@@ -86,6 +88,9 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         
         // input outfite categories
         pickerData = ["Casual", "Business", "Athletic"]
+        
+        let outputFormatter = DateFormatter()
+        outputFormatter.timeZone = TimeZone.autoupdatingCurrent
     }
     
     @IBAction func onSuggestButton(_ sender: Any) {
@@ -148,6 +153,15 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         
         suggestResult = self.resultOutfit
         print("\(occasion) \(self.resultOutfit)")
+        
+        let start = startTimePicker.date
+        let end = endTimePicker.date
+        
+        let df = DateFormatter()
+        df.dateFormat = "hh:mm a"
+        
+        dayResult["startTime"] = df.string(from: start)
+        dayResult["endTime"] = df.string(from: end)
     }
     
     @IBAction func onBackButton(_ sender: Any) {
@@ -192,6 +206,9 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
                 
                 self.locationLabel.text =  dataDictionary["name"] as? String
                 print(dataDictionary)
+                
+                dayResult["temp"] = self.currentTemp
+                dayResult["conditions"] = self.currentCondition
             }
         }
         task.resume()
