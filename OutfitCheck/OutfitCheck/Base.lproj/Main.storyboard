@@ -544,10 +544,10 @@
             </objects>
             <point key="canvasLocation" x="2244.927536231884" y="892.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Outfit Check Result View Controller-->
         <scene sceneID="Dnh-JT-BAr">
             <objects>
-                <viewController id="Eaa-7Z-P8M" sceneMemberID="viewController">
+                <viewController id="Eaa-7Z-P8M" customClass="OutfitCheckResultViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uRB-T8-vBo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -698,6 +698,19 @@
                         <viewLayoutGuide key="safeArea" id="ztk-m1-gIo"/>
                     </view>
                     <navigationItem key="navigationItem" id="v2N-Pq-ET0"/>
+                    <connections>
+                        <outlet property="endConditions" destination="kjt-Fp-DsS" id="oDH-Bm-Dfu"/>
+                        <outlet property="endImage" destination="Ufx-X7-ToU" id="gD9-Ku-S4r"/>
+                        <outlet property="endTemp" destination="hga-5V-ND1" id="U33-cn-8Pu"/>
+                        <outlet property="endTime" destination="e0t-j5-CV0" id="X9w-r6-KgI"/>
+                        <outlet property="outfitImage" destination="SzU-oQ-WWn" id="ppZ-hm-5bX"/>
+                        <outlet property="startConditions" destination="EAj-H4-2rs" id="roy-of-1CR"/>
+                        <outlet property="startImage" destination="gct-f6-Nor" id="KnR-Hw-cXG"/>
+                        <outlet property="startTemp" destination="4qP-dc-i2K" id="Lvc-rg-lGp"/>
+                        <outlet property="startTime" destination="fgz-V0-ck2" id="d9d-hd-o5U"/>
+                        <outlet property="suggestImage" destination="68Z-l9-6g6" id="AMV-ow-fkV"/>
+                        <outlet property="suggestLabel" destination="DrA-vv-JDf" id="NPQ-tp-XHn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnb-fC-S0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
