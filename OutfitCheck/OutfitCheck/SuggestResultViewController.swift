@@ -37,8 +37,10 @@ class SuggestResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // these are the result dictionaries
+        print(suggestResult)
+        print(outfitCheckResult)
     }
-    
 
     
     

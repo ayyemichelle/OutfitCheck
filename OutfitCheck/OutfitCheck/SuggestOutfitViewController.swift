@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
+var suggestResult : [String : String] = [:]
+
 class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
 
     var locManager = CLLocationManager()
@@ -87,8 +89,6 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     @IBAction func onSuggestButton(_ sender: Any) {
-        // use predefined outfit models for each attire type
-        
         self.resultOutfit = ["top" : "",
                         "bottom" : "",
                         "shoes" : "",
@@ -100,7 +100,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         case "Casual":
             if (tempSetting == "cool") {
                 for (k, _) in self.resultOutfit {
-                    resultOutfit[k] = self.casual.cool[k]?.randomElement() ?? self.casual.cool[k]?[0]
+                    self.resultOutfit[k] = self.casual.cool[k]?.randomElement() ?? self.casual.cool[k]?[0]
                 }
             }
             else {
@@ -115,7 +115,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         case "Business":
             if (tempSetting == "cool") {
                 for (k, _) in self.resultOutfit {
-                    resultOutfit[k] = self.business.cool[k]?.randomElement() ?? self.business.cool[k]?[0]
+                    self.resultOutfit[k] = self.business.cool[k]?.randomElement() ?? self.business.cool[k]?[0]
                 }
             }
             else {
@@ -130,7 +130,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         case "Athletic":
             if (tempSetting == "cool") {
                 for (k, _) in self.resultOutfit {
-                    resultOutfit[k] = self.athletic.cool[k]?.randomElement() ?? self.athletic.cool[k]?[0]
+                    self.resultOutfit[k] = self.athletic.cool[k]?.randomElement() ?? self.athletic.cool[k]?[0]
                 }
             }
             else {
@@ -146,6 +146,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
             print("this shouldn't be printed")
         }
         
+        suggestResult = self.resultOutfit
         print("\(occasion) \(self.resultOutfit)")
     }
     
