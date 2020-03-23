@@ -24,3 +24,16 @@ Our app will not be making use of a database.
 - Open Weather API 
   - To get the weather projections for the day and based on that approve or suggest articles of clothing to user. 
 
+## Walk-Through of App 
+<img src="http://g.recordit.co/btIYK6rYJx.gif" width=250>
+
+## User Stories 
+The application can do the following:
+[x] The application grabs the user's current location 
+[x] Users will have an outfit suggested to them based on their current location & occasion preference 
+[x] Users can edit their selection 
+
+## Future Implementation 
+[] Users can upload or take a picture to scan if their outfit is suitable for the weather
+[] Improve the outfit generating algorithm 
+[] Improve the UI/UX
