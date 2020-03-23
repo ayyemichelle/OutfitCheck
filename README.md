@@ -28,7 +28,7 @@ Our app will not be making use of a database.
 <img src="http://g.recordit.co/btIYK6rYJx.gif" width=250>
 
 ## User Stories 
-The application can do the following:
+The application can do the following:<br>
 [x] The application grabs the user's current location 
 [x] Users will have an outfit suggested to them based on their current location & occasion preference 
 [x] Users can edit their selection 
