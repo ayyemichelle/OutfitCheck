@@ -70,6 +70,8 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     
     // outfit suggestion result
     var resultOutfit : [String :  String] = [:]
+    
+    var imageLabels = [[String : Any]]()
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,8 +167,17 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         
         // send api request
         GoogleVisionAPI.annotateImageRequest(encodedImage: encodedImageString)
-        
         dismiss(animated: true, completion: nil)
+    }
+    
+    func processLabels() -> [String] {
+        var descriptions = [String]()
+        
+        for item in imageResults {
+            descriptions.append(item["description"] as! String)
+        }
+        
+        return descriptions
     }
     
     func computeOutfit() {
@@ -177,10 +188,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
          */
         
         let temp = (currentTemp < 295.372) ? "cool" : "warm"
-        
-        // dictionary mapping if apparel type was accounted for, will tell us
-        // which categories we need to generate a suggestion
-        // keys mapped as True can be displayed as good to go in result controller
         var results : [String : Bool]
         
         // reset resultOutfit to empty
