@@ -61,6 +61,10 @@
                                     <segue destination="cwB-me-YmN" kind="show" id="y1j-q7-cPy"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="start_icon" translatesAutoresizingMaskIntoConstraints="NO" id="wq3-ZW-eQt">
+                                <rect key="frame" x="87" y="315" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fbE-Ys-EeO"/>
@@ -201,7 +205,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pants" translatesAutoresizingMaskIntoConstraints="NO" id="8kA-G4-3Z9">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="74.5"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-oD-8Vg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-oD-8Vg">
                                         <rect key="frame" x="0.0" y="74.5" width="100" height="25.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25.5" id="oZl-1U-mFu"/>
@@ -223,7 +227,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="tshirt" translatesAutoresizingMaskIntoConstraints="NO" id="5im-J5-hKG">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="74.5"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qb-LZ-gnM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qb-LZ-gnM">
                                         <rect key="frame" x="0.0" y="74.5" width="100" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -246,7 +250,7 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="RpA-Sq-zT1"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jacket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xi-Gc-SzT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jacket" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xi-Gc-SzT">
                                         <rect key="frame" x="0.0" y="74.5" width="100" height="25.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25.5" id="Nhx-XJ-Ubv"/>
@@ -268,7 +272,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="shoe" translatesAutoresizingMaskIntoConstraints="NO" id="icF-t4-g08">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="74.5"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qC-RC-A5W">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shoes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qC-RC-A5W">
                                         <rect key="frame" x="0.0" y="74.5" width="100" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -296,22 +300,22 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36.659999999999997" id="dnL-P1-TCx"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp: 63 F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-WO-bii">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp: 60 F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhs-WO-bii">
                                         <rect key="frame" x="0.0" y="111.5" width="160" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36.700000000000003" id="Y5o-jM-9Xx"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: Windy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9F-ah-MoW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: Rain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9F-ah-MoW">
                                         <rect key="frame" x="0.0" y="148.5" width="160" height="36.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -337,7 +341,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36.659999999999997" id="393-OD-Wty"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -346,13 +350,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36.700000000000003" id="48U-EY-dja"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: Windy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gu8-ml-nhR">
                                         <rect key="frame" x="0.0" y="148.5" width="160" height="36.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -544,10 +548,10 @@
             </objects>
             <point key="canvasLocation" x="2244.927536231884" y="892.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Outfit Check Result View Controller-->
         <scene sceneID="Dnh-JT-BAr">
             <objects>
-                <viewController id="Eaa-7Z-P8M" sceneMemberID="viewController">
+                <viewController id="Eaa-7Z-P8M" customClass="OutfitCheckResultViewController" customModule="OutfitCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uRB-T8-vBo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -584,7 +588,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="s5Y-RA-rZX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -603,7 +607,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36.659999999999997" id="MGH-72-I2K"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -612,13 +616,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36.700000000000003" id="oPd-EW-Tu6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: Windy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAj-H4-2rs">
                                         <rect key="frame" x="0.0" y="148.5" width="160" height="36.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -644,7 +648,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36.659999999999997" id="jQa-Vf-dNd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -653,13 +657,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36.700000000000003" id="M2k-UF-yDt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conditions: Windy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjt-Fp-DsS">
                                         <rect key="frame" x="0.0" y="148.5" width="160" height="36.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -698,6 +702,19 @@
                         <viewLayoutGuide key="safeArea" id="ztk-m1-gIo"/>
                     </view>
                     <navigationItem key="navigationItem" id="v2N-Pq-ET0"/>
+                    <connections>
+                        <outlet property="endConditions" destination="kjt-Fp-DsS" id="oDH-Bm-Dfu"/>
+                        <outlet property="endImage" destination="Ufx-X7-ToU" id="gD9-Ku-S4r"/>
+                        <outlet property="endTemp" destination="hga-5V-ND1" id="U33-cn-8Pu"/>
+                        <outlet property="endTime" destination="e0t-j5-CV0" id="X9w-r6-KgI"/>
+                        <outlet property="outfitImage" destination="SzU-oQ-WWn" id="ppZ-hm-5bX"/>
+                        <outlet property="startConditions" destination="EAj-H4-2rs" id="roy-of-1CR"/>
+                        <outlet property="startImage" destination="gct-f6-Nor" id="KnR-Hw-cXG"/>
+                        <outlet property="startTemp" destination="4qP-dc-i2K" id="Lvc-rg-lGp"/>
+                        <outlet property="startTime" destination="fgz-V0-ck2" id="d9d-hd-o5U"/>
+                        <outlet property="suggestImage" destination="68Z-l9-6g6" id="AMV-ow-fkV"/>
+                        <outlet property="suggestLabel" destination="DrA-vv-JDf" id="NPQ-tp-XHn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnb-fC-S0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -789,6 +806,7 @@
         <image name="moon" width="512" height="512"/>
         <image name="pants" width="512" height="512"/>
         <image name="shoe" width="512" height="512"/>
+        <image name="start_icon" width="2048" height="2048"/>
         <image name="sun" width="512" height="512"/>
         <image name="tshirt" width="512" height="512"/>
     </resources>
