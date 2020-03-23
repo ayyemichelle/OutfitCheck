@@ -120,7 +120,7 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-           occasion = pickerData[row]
+           return pickerData[row]
        }
     
     @IBAction func onTakePictureButton(_ sender: Any) {
@@ -227,6 +227,7 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
          3. For any key that had 0 matches, flag as False (missing)
          4. Otherwise, if match found flag as True, continue to next key iteration
          */
+        return ["Hello": true]
     }
     
     /*

@@ -17,6 +17,9 @@ class SuggestResultViewController: UIViewController {
     }
     
 
+    
+    
+    
     /*
     // MARK: - Navigation
 
