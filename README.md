@@ -29,9 +29,9 @@ Our app will not be making use of a database.
 
 ## User Stories 
 The application can do the following:<br>
-[x] The application grabs the user's current location 
-[x] Users will have an outfit suggested to them based on their current location & occasion preference 
-[x] Users can edit their selection 
+[x] The application grabs the user's current location<br>
+[x] Users will have an outfit suggested to them based on their current location & occasion preference <br>
+[x] Users can edit their selection <br>
 
 ## Future Implementation 
 [] Users can upload or take a picture to scan if their outfit is suitable for the weather
