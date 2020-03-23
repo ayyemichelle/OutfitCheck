@@ -41,10 +41,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-        //print("longitude: \(longitude) & latitude: \(latitude)" )
-        
-        // use user's location to make call to API
-      
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -56,9 +52,6 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
        latitude = locValue!.latitude
         
        locationManager.stopUpdatingLocation()
-        print("updated location")
-       
-        
     }
     
     

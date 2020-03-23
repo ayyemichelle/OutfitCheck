@@ -73,6 +73,7 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         super.viewDidLoad()
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "DancingScript-Regular", size: 19) as Any]
         
+        // get user's latitude and longitude
         locManager.requestWhenInUseAuthorization()
         if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedAlways {
             longitude = locManager.location?.coordinate.longitude ?? 0.0
@@ -168,7 +169,7 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
          3. Get image from user, process with API, send results back for processing
          */
         
-        let temp = (currentTemp < 72.0) ? "cool" : "warm"
+        let temp = (currentTemp < 295.372) ? "cool" : "warm"
         
         // dictionary mapping if apparel type was accounted for, will tell us
         // which categories we need to generate a suggestion

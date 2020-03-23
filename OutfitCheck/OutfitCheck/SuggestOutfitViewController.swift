@@ -16,6 +16,8 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     var longitude: CLLocationDegrees = 0.0
     var latitude: CLLocationDegrees = 0.0
     var city: String = ""
+    var currentCondition : String = ""
+    var currentTemp : Double = 0.0
     @IBOutlet weak var locationLabel: UILabel!
     
     @IBOutlet weak var picker: UIPickerView!
@@ -27,39 +29,37 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     // weather data
     let conditions: [String] = ["Clear", "Drizzle", "Snow", "Rain", "Clouds", "Thunderstorm"]
-    var currentCondition : String = ""
-    var currentTemp : Double = 0.0
     
     // suggestion opions based on each attire type
     let casual = Attire.init(
-    warm: ["top" : ["t-shirt"],
-           "bottom" : ["shorts/skirt", "jeans"],
-           "shoes" : ["sneakers", "sandal"],
-           "outerwear" : ["cardigan", "jacket"]],
-    cool: ["top" : ["sweater"],
-           "bottom" : ["jeans", "trousers"],
-           "shoes" : ["boot", "sneakers"],
-           "outerwear" : ["jacket", "coat"]])
+    warm: ["top" : ["T-shirt"],
+           "bottom" : ["Shorts/Skirt", "Jeans"],
+           "shoes" : ["Sneakers", "Sandals"],
+           "outerwear" : ["Cardigan", "Jacket"]],
+    cool: ["top" : ["Sweater", "Long-sleeved Top"],
+           "bottom" : ["Jeans", "Trousers"],
+           "shoes" : ["Boots", "Sneakers"],
+           "outerwear" : ["Jacket", "Coat"]])
     
     let business = Attire.init(
-    warm: ["top" : ["polo shirt", "dress shirt", "blouse"],
-           "bottom" : ["skirt/trousers"],
-           "shoes" : ["flats/loafers"],
-           "outerwear" : ["cardigan", "blazer"]],
-    cool: ["top" : ["sweater", "blouse", "dress shirt"],
-           "bottom" : ["trousers", "pants"],
-           "shoes" : ["flats/loafers"],
-           "outerwear" : ["blazer", "coat"]])
+    warm: ["top" : ["Polo", "Dress Shirt", "Blouse"],
+           "bottom" : ["Skirt/Trousers"],
+           "shoes" : ["Flats/Loafers"],
+           "outerwear" : ["Cardigan", "Blazer"]],
+    cool: ["top" : ["Sweater", "Blouse", "Dress Shirt"],
+           "bottom" : ["Trousers", "Pants"],
+           "shoes" : ["Flats/Loafers"],
+           "outerwear" : ["Blazer", "Coat"]])
     
     let athletic = Attire.init(
-    warm: ["top" : ["t-shirt", "tanktop"],
-           "bottom" : ["shorts", "leggings"],
-           "shoes" : ["sneakers"],
-           "outerwear" : ["jacket"]],
-    cool: ["top" : ["sweater", "t-shirt"],
-           "bottom" : ["sweatpants", "leggings", "yoga pant", "active pants"],
-           "shoes" : ["sneakers", "footwear", "sock"],
-           "outerwear" : ["jacket"]])
+    warm: ["top" : ["T-shirt", "Tanktop"],
+           "bottom" : ["Shorts", "Leggings"],
+           "shoes" : ["Sneakers"],
+           "outerwear" : ["Jacket"]],
+    cool: ["top" : ["Sweater", "T-shirt"],
+           "bottom" : ["Sweatpants", "Leggings"],
+           "shoes" : ["Sneakers"],
+           "outerwear" : ["Jacket"]])
     
     var resultOutfit : [String :  String] = [:]
     
@@ -69,6 +69,7 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
         
         // Do any additional setup after loading the view.
         
+        // get user's latitude and longitude
         locManager.requestWhenInUseAuthorization()
         if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedAlways {
             longitude = locManager.location?.coordinate.longitude ?? 0.0
@@ -88,21 +89,64 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBAction func onSuggestButton(_ sender: Any) {
         // use predefined outfit models for each attire type
         
-        resultOutfit = ["top" : "",
+        self.resultOutfit = ["top" : "",
                         "bottom" : "",
                         "shoes" : "",
                         "outerwear" : ""]
         
+        let tempSetting = (currentTemp < 295.372) ? "cool" : "warm"
+        
         switch(occasion) {
         case "Casual":
-            print("casual selected")
+            if (tempSetting == "cool") {
+                for (k, _) in self.resultOutfit {
+                    resultOutfit[k] = self.casual.cool[k]?.randomElement() ?? self.casual.cool[k]?[0]
+                }
+            }
+            else {
+                for (k, _) in self.resultOutfit {
+                    self.resultOutfit[k] = self.casual.warm[k]?.randomElement() ?? self.casual.warm[k]?[0]
+                }
+                
+                if self.currentCondition == "Clear" {
+                    self.resultOutfit["outerwear"] = "Not needed!"
+                }
+            }
         case "Business":
-            print("business selecteed")
+            if (tempSetting == "cool") {
+                for (k, _) in self.resultOutfit {
+                    resultOutfit[k] = self.business.cool[k]?.randomElement() ?? self.business.cool[k]?[0]
+                }
+            }
+            else {
+                for (k, _) in self.resultOutfit {
+                    self.resultOutfit[k] = self.business.warm[k]?.randomElement() ?? self.business.warm[k]?[0]
+                }
+                
+                if self.currentCondition == "Clear" {
+                    self.resultOutfit["outerwear"] = "Not needed!"
+                }
+            }
         case "Athletic":
-            print("athletic selected")
+            if (tempSetting == "cool") {
+                for (k, _) in self.resultOutfit {
+                    resultOutfit[k] = self.athletic.cool[k]?.randomElement() ?? self.athletic.cool[k]?[0]
+                }
+            }
+            else {
+                for (k, _) in self.resultOutfit {
+                    self.resultOutfit[k] = self.athletic.warm[k]?.randomElement() ?? self.athletic.warm[k]?[0]
+                }
+                
+                if self.currentCondition == "Clear" {
+                    self.resultOutfit["outerwear"] = "Not needed!"
+                }
+            }
         default:
             print("this shouldn't be printed")
         }
+        
+        print("\(occasion) \(self.resultOutfit)")
     }
     
     @IBAction func onBackButton(_ sender: Any) {
@@ -134,6 +178,16 @@ class SuggestOutfitViewController: UIViewController, UIPickerViewDelegate, UIPic
             } else if let data = data {
                 // data is contained in this dictionary
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                
+                if let weather = dataDictionary["weather"] as? [[String : Any]],
+                    let cond = weather[0]["main"] {
+                    self.currentCondition = cond as! String
+                }
+                
+                if let temp = dataDictionary["main"] as? [String : Double],
+                    let tempMax = temp["temp_max"], let tempMin = temp["temp_min"] {
+                    self.currentTemp = (tempMax + tempMin) / 2.0
+                }
                 
                 self.locationLabel.text =  dataDictionary["name"] as? String
                 print(dataDictionary)
