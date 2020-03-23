@@ -13,6 +13,7 @@ import AlamofireImage
 
 class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var locManager = CLLocationManager()
     var longitude: CLLocationDegrees = 0.0
     var latitude: CLLocationDegrees = 0.0
     
@@ -31,9 +32,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     
     // weather data
     let conditions: [String] = ["Clear", "Drizzle", "Snow", "Rain", "Clouds", "Thunderstorm"]
-    
-    // might make seperate temperature object for info, if keeping both start time/end time forecasts
-    // TBD
     var currentCondition : String = ""
     var currentTemp : Double = 0.0
     
@@ -74,6 +72,14 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "DancingScript-Regular", size: 19) as Any]
+        
+        // get user's latitude and longitude
+        locManager.requestWhenInUseAuthorization()
+        if CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedAlways {
+            longitude = locManager.location?.coordinate.longitude ?? 0.0
+            latitude = (locManager.location?.coordinate.latitude) ?? 0.0
+        }
+        
         sendOpenWeatherRequest()
         
         self.picker.delegate = self
@@ -100,8 +106,6 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
                   //self.movies = dataDictionary["results"] as! [[String:Any]] // need to cast as array of dictionaries
                   
                   print(dataDictionary)
-                  
-                  
               }
           }
           task.resume()
@@ -164,7 +168,7 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
          3. Get image from user, process with API, send results back for processing
          */
         
-        let temp = (currentTemp < 72.0) ? "cool" : "warm"
+        let temp = (currentTemp < 295.372) ? "cool" : "warm"
         
         // dictionary mapping if apparel type was accounted for, will tell us
         // which categories we need to generate a suggestion
@@ -173,9 +177,9 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
         
         // reset resultOutfit to empty
         resultOutfit = ["top" : "",
-        "bottom" : "",
-        "shoes" : "",
-        "outerwear" : ""]
+                        "bottom" : "",
+                        "shoes" : "",
+                        "outerwear" : ""]
 
         switch(occasion) {
             case "Casual":
@@ -227,7 +231,8 @@ class OutfitCheckViewController: UIViewController, CLLocationManagerDelegate, UI
          3. For any key that had 0 matches, flag as False (missing)
          4. Otherwise, if match found flag as True, continue to next key iteration
          */
-        return ["Hello": true]
+        var res : [String : Bool] = ["temp" : false]
+        return res
     }
     
     /*
